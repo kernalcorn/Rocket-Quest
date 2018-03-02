@@ -13,8 +13,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application
 {
-	//meme
-
+	//memes
 	private Stage primaryStage;
 	private BorderPane rootLayout;
 	
