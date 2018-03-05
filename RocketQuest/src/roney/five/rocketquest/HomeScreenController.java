@@ -82,7 +82,7 @@ public class HomeScreenController
 	@FXML
 	private void initialize()
 	{
-		stopwatch.start();
+		//stopwatch.start();
 	}
 	
 	//changes the screen to the new game screen
