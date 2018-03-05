@@ -13,7 +13,6 @@ import javafx.stage.Stage;
 
 public class Main extends Application
 {
-	//memes
 	private Stage primaryStage;
 	private BorderPane rootLayout;
 	
@@ -48,7 +47,7 @@ public class Main extends Application
 			FXMLLoader loader = new FXMLLoader();
 			
 			//point the loader at the FXML file
-			loader.setLocation(Main.class.getResource("/application/RootLayout.FXML"));
+			loader.setLocation(Main.class.getResource("/application/HomeScreen.FXML"));
 			
 			//Set the root layout field, casting as appropriate
 			rootLayout = (BorderPane) loader.load();
