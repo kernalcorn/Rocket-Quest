@@ -47,7 +47,7 @@ public class Main extends Application
 			FXMLLoader loader = new FXMLLoader();
 			
 			//point the loader at the FXML file
-			loader.setLocation(Main.class.getResource("/application/HomeScreen.FXML"));
+			loader.setLocation(Main.class.getResource("/roney.five.rocketquest/HomeScreen.FXML"));
 			
 			//Set the root layout field, casting as appropriate
 			rootLayout = (BorderPane) loader.load();
