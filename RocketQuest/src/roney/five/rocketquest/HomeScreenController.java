@@ -28,8 +28,8 @@ public class HomeScreenController
 	private ImageView imgLogo;
 	
 	
-	String[] testFrames = {"src/images/TEST1", "src/images/TEST2", "src/images/TEST3", "src/images/TEST4", 
-						   "src/images/TEST5", "src/images/TEST6", "src/images/TEST7", "src/images/TEST8"};
+	String[] testFrames = {"file:src/images/TEST1.png", "file:src/images/TEST2", "file:src/images/TEST3", "file:src/images/TEST4", 
+						   "file:src/images/TEST5", "file:src/images/TEST6", "file:src/images/TEST7", "file:src/images/TEST8"};
 	
 	public HomeScreenController()
 	{

@@ -9,12 +9,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class Main extends Application
 {
 	private Stage primaryStage;
-	private BorderPane rootLayout;
+	private StackPane rootLayout;
 	
 	public void start(Stage primaryStage)
 	{
@@ -50,7 +51,7 @@ public class Main extends Application
 			loader.setLocation(Main.class.getResource("/roney.five.rocketquest/HomeScreen.FXML"));
 			
 			//Set the root layout field, casting as appropriate
-			rootLayout = (BorderPane) loader.load();
+			rootLayout = (StackPane) loader.load();
 			
 			//set the scene object to our root layout
 			Scene scene = new Scene(rootLayout);
