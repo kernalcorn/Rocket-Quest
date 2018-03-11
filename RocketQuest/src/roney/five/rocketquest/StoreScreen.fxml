@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="roney.five.rocketquest.StoreScreenController">
+   <children>
+      <ImageView fx:id="imgBackground" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="imgBack" fitHeight="50.0" fitWidth="175.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#handleBack" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgMoney" fitHeight="50.0" fitWidth="200.0" layoutX="290.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgPartStats" fitHeight="100.0" fitWidth="200.0" layoutX="536.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <VBox layoutX="14.0" layoutY="86.0" prefHeight="315.0" prefWidth="575.0">
+               <children>
+                  <HBox prefHeight="75.0" prefWidth="575.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="125.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgTier1" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="60.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgTier2" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="60.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgTier3" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="75.0" prefWidth="575.0">
+                     <children>
+                        <ImageView fx:id="imgBody" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="60.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgBodyT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBodyT1" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="60.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgBodyT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBodyT2" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="60.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgBodyT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBodyT3" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="75.0" prefWidth="575.0">
+                     <children>
+                        <ImageView fx:id="imgTank" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgTankT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleTankT1" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgTankT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleTankT2" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgTankT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleTankT3" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="75.0" prefWidth="575.0">
+                     <children>
+                        <ImageView fx:id="imgBooster" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgBoostT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBoostT1" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgBoostT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBoostT2" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgBoostT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBoostT3" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="75.0" prefWidth="575.0">
+                     <children>
+                        <ImageView fx:id="imgNoseCap" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgNoseT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleNoseT1" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgNoseT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleNoseT2" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgNoseT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleNoseT3" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="65.0" prefWidth="575.0">
+                     <children>
+                        <ImageView fx:id="imgFins" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgFinsT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleFinsT1" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgFinsT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleFinsT2" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+                        <ImageView fx:id="imgFinsT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleFinsT3" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
