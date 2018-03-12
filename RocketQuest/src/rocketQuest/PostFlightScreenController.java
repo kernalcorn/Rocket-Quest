@@ -1,4 +1,4 @@
-package roney.five.rocketquest;
+package rocketQuest;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;

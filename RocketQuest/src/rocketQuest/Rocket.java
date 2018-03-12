@@ -1,4 +1,4 @@
-package roney.five.rocketquest;
+package rocketQuest;
 
 public class Rocket 
 {

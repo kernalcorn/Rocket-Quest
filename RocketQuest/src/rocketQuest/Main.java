@@ -1,9 +1,7 @@
-package roney.five.rocketquest;
+package rocketQuest;
 
 import java.io.IOException;
 
-import roney.five.rocketquest.Main;
-import roney.five.rocketquest.RootLayoutController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,6 +9,8 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import rocketQuest.Main;
+import rocketQuest.RootLayoutController;
 
 public class Main extends Application
 {
@@ -23,8 +23,7 @@ public class Main extends Application
 		{
 			this.primaryStage = primaryStage;
 			this.primaryStage.setTitle("Rocket Quest");
-			
-			this.primaryStage.getIcons().add(new Image("file:resources/Application.png"));
+			//this.primaryStage.getIcons().add(new Image("file:resources/Application.png"));
 			
 			initRootLayout();
 		}catch(Exception e)
@@ -48,7 +47,7 @@ public class Main extends Application
 			FXMLLoader loader = new FXMLLoader();
 			
 			//point the loader at the FXML file
-			loader.setLocation(Main.class.getResource("/roney.five.rocketquest/HomeScreen.FXML"));
+			loader.setLocation(Main.class.getResource("/rocketQuest/HomeScreen.FXML"));
 			
 			//Set the root layout field, casting as appropriate
 			rootLayout = (StackPane) loader.load();
