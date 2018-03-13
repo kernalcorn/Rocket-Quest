@@ -1,8 +1,5 @@
 package rocketQuest;
 
-import java.io.File;
-
-import org.omg.CORBA.PRIVATE_MEMBER;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;

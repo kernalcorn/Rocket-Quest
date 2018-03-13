@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="242.0" layoutY="187.0" text="Tier 1" />
+            <Label layoutX="345.0" layoutY="187.0" text="Tier 2" />
+            <Label layoutX="451.0" layoutY="187.0" text="Tier 3" />
+            <Label layoutX="111.0" layoutY="231.0" text="Body" />
+            <Label layoutX="111.0" layoutY="300.0" text="Tank" />
+            <Label layoutX="111.0" layoutY="366.0" text="Booster" />
+            <Label layoutX="111.0" layoutY="436.0" text="Nose Cap" />
+            <Label layoutX="111.0" layoutY="500.0" text="Fins" />
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="239.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="342.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="448.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="237.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="237.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="237.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="237.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="342.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="342.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="342.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="342.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="448.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="448.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="448.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="449.0" layoutY="494.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/number3.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="264.0" layoutY="45.0" text="\$0000000000" />
+            <Label layoutX="419.0" layoutY="45.0" text="Item name:" />
+            <Label layoutX="424.0" layoutY="69.0" text="Capacity:" />
+            <Label layoutX="427.0" layoutY="96.0" text="Weight:" />
+            <Label layoutX="433.0" layoutY="122.0" text="Price:" />
+            <Label layoutX="492.0" layoutY="45.0" text="Label" />
+            <Label layoutX="492.0" layoutY="69.0" text="Label" />
+            <Label layoutX="492.0" layoutY="96.0" text="Label" />
+            <Label layoutX="492.0" layoutY="122.0" text="Label" />
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="32.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Misc%20Stuff/workshopbutton.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
