@@ -1,37 +1,33 @@
-package rocketQuest;
-
-import java.io.File;
-
-import org.omg.CORBA.PRIVATE_MEMBER;
+package rocketQuest.PostFlightScreen;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import rocketQuest.Main;
 
 
-public class HomeScreenController 
+public class PostFlightScreenController 
 {
 	//reference field to the main app handle
 	private Main mainApp;
 	
 	@FXML
-	private ImageView imgNewGame;
-	
-	@FXML
-	private ImageView imgContinue;
-	
-	@FXML
 	private ImageView imgBackground;
 	
 	@FXML
-	private ImageView imgLogo;
+	private ImageView imgLaunch;
 	
+	@FXML
+	private ImageView imgWorkshop;
 	
-	String[] testFrames = {"file:src/images/TEST1.png", "file:src/images/TEST2", "file:src/images/TEST3", "file:src/images/TEST4", 
-						   "file:src/images/TEST5", "file:src/images/TEST6", "file:src/images/TEST7", "file:src/images/TEST8"};
+	@FXML
+	private ImageView imgScoreDisplay;
 	
-	public HomeScreenController()
+	@FXML
+	private ImageView imgMoneyMade;
+	
+	public PostFlightScreenController()
 	{
 		
 	}
@@ -57,8 +53,6 @@ public class HomeScreenController
 			{
 				tickerTime++;
 				
-				imgBackground.setImage(new Image(testFrames[elapsedseconds]));
-				
 				if(elapsedseconds == 8)
 				{
 					stopwatch.stop();
@@ -82,21 +76,19 @@ public class HomeScreenController
 	@FXML
 	private void initialize()
 	{
-		//stopwatch.start();
-	}
-	
-	//changes the screen to the new game screen
-	@FXML
-	private void handleNewGame()
-	{
 		
 	}
 	
-	//changes the screen to the workshop screen
 	@FXML
-	private void handleContinue()
+	private void handleWorkshop()
 	{
-		
+		//change screen to workshop
+	}
+	
+	@FXML
+	private void handleLaunch()
+	{
+		//change screen to launch
 	}
 	
 	public void setMainApp(Main mainApp) 

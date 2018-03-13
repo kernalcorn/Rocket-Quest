@@ -1,9 +1,10 @@
-package rocketQuest;
+package rocketQuest.StoreScreen;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import rocketQuest.Main;
 
 
 public class StoreScreenController 

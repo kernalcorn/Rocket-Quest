@@ -1,4 +1,4 @@
-package rocketQuest;
+package rocketQuest.PartClasses;
 
 public class Fins extends RocketPart
 {
