@@ -1,4 +1,4 @@
-package rocketQuest;
+package rocketQuest.PartClasses;
 
 public class Body extends RocketPart
 {
