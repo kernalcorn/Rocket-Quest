@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="77.0" fitWidth="139.0" layoutX="36.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/workshopbutton.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="143.0" fitWidth="149.0" layoutX="225.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Documents/Rocket%20Quest/Rocket%20PNGS/b1n1f1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="414.0" layoutY="36.0" text="Height:" />
+            <Label layoutX="468.0" layoutY="36.0" text="Label" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
