@@ -105,7 +105,7 @@
             <Label layoutX="520.0" layoutY="160.0" text="Label" />
             <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="32.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/workshopbutton.png" />
+                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/shopbutton.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="203.0" fitWidth="200.0" layoutX="61.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
@@ -118,6 +118,12 @@
             <Label layoutX="26.0" layoutY="482.0" text="Weight:" />
             <Label layoutX="29.0" layoutY="509.0" text="Thrust:" />
             <Label layoutX="32.0" layoutY="537.0" text="Drag:" />
+            <ImageView fitHeight="59.0" fitWidth="102.0" layoutX="453.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="478.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/launchbutton.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
