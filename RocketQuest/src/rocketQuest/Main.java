@@ -1,16 +1,18 @@
 package rocketQuest;
 
 import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-import rocketQuest.Main;
-import rocketQuest.PartClasses.*;
-import rocketQuest.RootLayoutController;
+import rocketQuest.PartClasses.Body;
+import rocketQuest.PartClasses.Booster;
+import rocketQuest.PartClasses.Fins;
+import rocketQuest.PartClasses.NoseCap;
+import rocketQuest.PartClasses.Tank;
 
 public class Main extends Application
 {
@@ -117,6 +119,7 @@ public class Main extends Application
 	{
 		
 	}
+	
 	
 	/*
 	public static String updateRocket()
