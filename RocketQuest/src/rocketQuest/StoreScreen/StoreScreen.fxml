@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -7,15 +8,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 
-
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="roney.five.rocketquest.StoreScreenController">
    <children>
       <ImageView fx:id="imgBackground" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <ImageView fx:id="imgBack" fitHeight="50.0" fitWidth="175.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#handleBack" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgBack" fitHeight="82.0" fitWidth="93.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#handleBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/workshopbutton.png" />
+               </image></ImageView>
             <ImageView fx:id="imgMoney" fitHeight="50.0" fitWidth="200.0" layoutX="290.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="imgPartStats" fitHeight="100.0" fitWidth="200.0" layoutX="536.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgPartStats" fitHeight="100.0" fitWidth="200.0" layoutX="536.0" pickOnBounds="true" preserveRatio="true" />
             <VBox layoutX="14.0" layoutY="86.0" prefHeight="315.0" prefWidth="575.0">
                <children>
                   <HBox prefHeight="75.0" prefWidth="575.0">
