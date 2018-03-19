@@ -1,15 +1,18 @@
 package rocketQuest;
 
 import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-import rocketQuest.Main;
-import rocketQuest.RootLayoutController;
+import rocketQuest.PartClasses.Body;
+import rocketQuest.PartClasses.Booster;
+import rocketQuest.PartClasses.Fins;
+import rocketQuest.PartClasses.NoseCap;
+import rocketQuest.PartClasses.Tank;
 
 public class Main extends Application
 {
@@ -86,6 +89,37 @@ public class Main extends Application
 		StackPane WorkshopScreen = loader.load();
 		mainLayout.setCenter(WorkshopScreen);
 	}
+	
+	Body tier1Body = new Body(1, 1, 1, "T1", 1);
+	Body tier2Body = new Body(1, 1, 2, "T2", 1);
+	Body tier3Body = new Body(1, 1, 3, "T3", 1);
+	
+	Booster tier1Booster = new Booster(1, 1, 1, "T1", 1);
+	Booster tier2Booster = new Booster(1, 1, 2, "T2", 1);
+	Booster tier3Booster = new Booster(1, 1, 3, "T3", 1);
+	
+	Fins tier1Fins = new Fins(1, 1, 1, "T1", 1);
+	Fins tier2Fins = new Fins(1, 1, 2, "T2", 1);
+	Fins tier3Fins = new Fins(1, 1, 3, "T3", 1);
+	
+	NoseCap tier1NoseCap = new NoseCap(1, 1, 1, "T1", 1);
+	NoseCap tier2NoseCap = new NoseCap(1, 1, 2, "T2", 1);
+	NoseCap tier3NoseCap = new NoseCap(1, 1, 3, "T3", 1);
+	
+	Tank tier1Tank = new Tank(1, 1, 1, "T1", 1);
+	Tank tier2Tank = new Tank(1, 1, 2, "T2", 1);
+	Tank tier3Tank = new Tank(1, 1, 3, "T3", 1);
+	
+	public static void newBodyEquipped(String body)
+	{
+		
+	}
+	
+	public static void newBoosterEquipped()
+	{
+		
+	}
+	
 	
 	/*
 	public static String updateRocket()
