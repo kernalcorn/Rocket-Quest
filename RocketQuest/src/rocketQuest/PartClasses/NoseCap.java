@@ -9,7 +9,7 @@ public class NoseCap extends RocketPart
 		super();
 	}
 
-	public NoseCap(int drag) {
+	public NoseCap(int weight, int price, int tier, String name, int drag) {
 		super();
 		this.drag = drag;
 	}

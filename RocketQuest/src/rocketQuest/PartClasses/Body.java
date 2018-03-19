@@ -12,9 +12,10 @@ public class Body extends RocketPart
 	}
 
 	//Full constructors
-	public Body(int internalCapacity) 
+	public Body(int weight, int price, int tier, String name, int internalCapacity) 
 	{
 		super();
+		
 		this.internalCapacity = internalCapacity;
 	}
 

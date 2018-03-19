@@ -120,6 +120,8 @@ public class StoreScreenController
 			{
 				tickerTime++;
 				
+				//place animations here
+				
 				if(elapsedseconds == 8)
 				{
 					stopwatch.stop();

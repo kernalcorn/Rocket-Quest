@@ -9,7 +9,7 @@ public class Tank extends RocketPart
 		super();
 	}
 
-	public Tank(int fuelCapacity) {
+	public Tank(int weight, int price, int tier, String name, int fuelCapacity) {
 		super();
 		this.fuelCapacity = fuelCapacity;
 	}

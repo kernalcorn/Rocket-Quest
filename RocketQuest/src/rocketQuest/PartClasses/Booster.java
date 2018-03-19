@@ -9,7 +9,7 @@ public class Booster extends RocketPart
 		super();
 	}
 
-	public Booster(int thrust) {
+	public Booster(int weight, int price, int tier, String name, int thrust) {
 		super();
 		this.thrust = thrust;
 	}
