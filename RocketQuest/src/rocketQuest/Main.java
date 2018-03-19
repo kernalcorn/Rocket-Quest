@@ -50,10 +50,51 @@ public class Main extends Application
 	public static void showHomeScreen() throws IOException
 	{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("HomeScreen/RootLayout.fxml"));
+		loader.setLocation(Main.class.getResource("HomeScreen/HomeScreen.fxml"));
 		StackPane HomeScreen = loader.load();
 		mainLayout.setCenter(HomeScreen);
 	}
 	
+	public static void showLaunchScreen() throws IOException
+	{
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("LaunchScreen/LaunchScreen.fxml"));
+		StackPane LaunchScreen = loader.load();
+		mainLayout.setCenter(LaunchScreen);
+	}
+	
+	public static void showPostFlightScreen() throws IOException
+	{
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("PostFlightScreen/PostFlightScreen.fxml"));
+		StackPane PostFlightScreen = loader.load();
+		mainLayout.setCenter(PostFlightScreen);
+	}
+	
+	public static void showStoreScreen() throws IOException
+	{
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("StoreScreen/StoreScreen.fxml"));
+		StackPane StoreScreen = loader.load();
+		mainLayout.setCenter(StoreScreen);
+	}
+	
+	public static void showWorkshopScreen() throws IOException
+	{
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("WorkshopScreen/WorkshopScreen.fxml"));
+		StackPane WorkshopScreen = loader.load();
+		mainLayout.setCenter(WorkshopScreen);
+	}
+	
+	/*
+	public static String updateRocket()
+	{
+		String rocketImage;
+		
+		
+		return rocketImage;
+	}
+	*/
 
 }
