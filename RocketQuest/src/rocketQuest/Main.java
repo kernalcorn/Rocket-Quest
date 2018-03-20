@@ -115,11 +115,23 @@ public class Main extends Application
 		
 	}
 	
-	public static void newBoosterEquipped()
+	public static void newBoosterEquipped(String booster)
 	{
 		
 	}
 	
+	public static void newFinsEquipped(String fins)
+	{
+		
+	}
+	public static void newNoseCapEquipped(String nosecap)
+	{
+		
+	}
+	public static void newTankEquipped(String tank)
+	{
+		
+	}
 	
 	/*
 	public static String updateRocket()
