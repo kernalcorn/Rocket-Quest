@@ -13,7 +13,7 @@
       <ImageView fx:id="imgBackground" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <ImageView fx:id="imgBack" fitHeight="82.0" fitWidth="93.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#handleBack" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="82.0" fitWidth="93.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#handleWorkshopSwitch" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/workshopbutton.png" />
                </image></ImageView>
