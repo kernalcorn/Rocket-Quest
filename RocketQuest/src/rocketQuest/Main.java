@@ -110,28 +110,7 @@ public class Main extends Application
 	Tank tier2Tank = new Tank(1, 1, 2, "T2", 1);
 	Tank tier3Tank = new Tank(1, 1, 3, "T3", 1);
 	
-	public static void newBodyEquipped(String body)
-	{
-		
-	}
 	
-	public static void newBoosterEquipped(String booster)
-	{
-		
-	}
-	
-	public static void newFinsEquipped(String fins)
-	{
-		
-	}
-	public static void newNoseCapEquipped(String nosecap)
-	{
-		
-	}
-	public static void newTankEquipped(String tank)
-	{
-		
-	}
 	
 	/*
 	public static String updateRocket()
