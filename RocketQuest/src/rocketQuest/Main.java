@@ -111,7 +111,6 @@ public class Main extends Application
 	Tank tier3Tank = new Tank(1, 1, 3, "T3", 1);
 	
 	
-	
 	/*
 	public static String updateRocket()
 	{
