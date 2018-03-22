@@ -1,6 +1,7 @@
 package rocketQuest;
 
 import java.io.IOException;
+import java.util.Date;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+//import rocketQuest.Database.Save;
 import rocketQuest.PartClasses.Body;
 import rocketQuest.PartClasses.Booster;
 import rocketQuest.PartClasses.Fins;
@@ -110,15 +112,88 @@ public class Main extends Application
 	Tank tier2Tank = new Tank(1, 1, 2, "T2", 1);
 	Tank tier3Tank = new Tank(1, 1, 3, "T3", 1);
 	
+	Date date = new Date();
 	
-	/*
-	public static String updateRocket()
+	String bodyImgString = "b1";
+	String noseCapImgString = "n1";
+	String finsImgString = "f1";
+	
+	String rocketImage = bodyImgString + noseCapImgString + finsImgString;
+	
+	//Save gameSave = new Save(date, 0, 0, 1, 1, 1, 1, 1, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
+	
+	public void newBodyEquipped(int tier)
 	{
-		String rocketImage;
+		bodyImgString = ("b" + String.valueOf(tier));
+		rocketImage = bodyImgString + noseCapImgString + finsImgString;
 		
-		
-		return rocketImage;
+		switch (tier) {
+			case 1:
+				
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+		}
 	}
-	*/
-
+	
+	public void newBoosterEquipped(int tier)
+	{
+		switch (tier) {
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+		}
+	}
+	
+	public void newFinsEquipped(int tier)
+	{
+		finsImgString = ("f" + String.valueOf(tier));
+		rocketImage = bodyImgString + noseCapImgString + finsImgString;
+		
+		switch (tier) {
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+		}
+	}
+	
+	public void newNoseCapEquipped(int tier)
+	{
+		noseCapImgString = ("n" + String.valueOf(tier));
+		rocketImage = bodyImgString + noseCapImgString + finsImgString;
+		
+		switch (tier) {
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+		}
+	}
+	
+	public void newTankEquipped(int tier) 
+	{
+		switch (tier) {
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+		}
+	}
+	
+	public String getRocketImageURL()
+	{
+		return ("file:images/RocketPNGS/" + rocketImage + ".png");
+	}
 }
