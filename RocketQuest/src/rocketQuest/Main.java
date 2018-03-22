@@ -117,7 +117,7 @@ public class Main extends Application
 	String bodyImgString = "b1";
 	String noseCapImgString = "n1";
 	String finsImgString = "f1";
-	
+	//
 	String rocketImage = bodyImgString + noseCapImgString + finsImgString;
 	
 	Save gameSave = new Save(date, 0, 0, 1, 1, 1, 1, 1, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
