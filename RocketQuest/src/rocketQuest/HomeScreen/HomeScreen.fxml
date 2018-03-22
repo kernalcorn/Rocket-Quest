@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 
-
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rocketQuest.HomeScreen.HomeScreenController">
    <children>
       <ImageView fx:id="imgBackground" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <children>
             <ImageView fx:id="imgNewGame" fitHeight="60.0" fitWidth="250.0" layoutX="175.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="imgContinue" fitHeight="60.0" fitWidth="250.0" layoutX="176.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgContinue" fitHeight="116.0" fitWidth="144.0" layoutX="244.0" layoutY="252.0" onMouseClicked="#handleStartGame" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/startgamebutton.png" />
+               </image></ImageView>
             <ImageView fx:id="imgLogo" fitHeight="133.0" fitWidth="421.0" layoutX="91.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>

@@ -1,5 +1,7 @@
 package rocketQuest.StoreScreen;
 
+import java.io.IOException;
+
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
@@ -149,9 +151,9 @@ public class StoreScreenController
 	}
 	
 	@FXML
-	private void handleBack()
+	private void handleWorkshopSwitch() throws IOException
 	{
-		//change screen to workshop screen
+		Main.showWorkshopScreen();
 	}
 	
 	@FXML

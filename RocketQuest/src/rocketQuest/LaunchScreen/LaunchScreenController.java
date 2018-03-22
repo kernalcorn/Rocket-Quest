@@ -1,7 +1,13 @@
 package rocketQuest.LaunchScreen;
 
 import rocketQuest.Main;
+<<<<<<< HEAD
 import javafx.animation.AnimationTimer;
+=======
+
+import java.io.IOException;
+
+>>>>>>> branch 'master' of https://github.com/kernalcorn/Rocket-Quest.git
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -72,9 +78,15 @@ public class LaunchScreenController {
 	}
 	
 	@FXML
+<<<<<<< HEAD
 	private void initialize()
 	{
 		
+=======
+	public void handleWorkshopSwitch() throws IOException
+	{
+		Main.showWorkshopScreen();
+>>>>>>> branch 'master' of https://github.com/kernalcorn/Rocket-Quest.git
 	}
 	
 	public void setMainApp(Main mainApp) 

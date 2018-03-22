@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 
-
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rocketQuest.WorkshopScreen.WorkshopScreenController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -103,9 +102,9 @@
             <Label layoutX="520.0" layoutY="114.0" text="Label" />
             <Label layoutX="520.0" layoutY="140.0" text="Label" />
             <Label layoutX="520.0" layoutY="160.0" text="Label" />
-            <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="32.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="32.0" layoutY="21.0" onMouseClicked="#handleStore" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/workshopbutton.png" />
+                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/shopbutton.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="203.0" fitWidth="200.0" layoutX="61.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
@@ -118,6 +117,11 @@
             <Label layoutX="26.0" layoutY="482.0" text="Weight:" />
             <Label layoutX="29.0" layoutY="509.0" text="Thrust:" />
             <Label layoutX="32.0" layoutY="537.0" text="Drag:" />
+            <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="481.0" layoutY="21.0" onMouseClicked="#handleLaunch" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/launchbutton.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

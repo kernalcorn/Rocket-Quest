@@ -1,5 +1,7 @@
 package rocketQuest.HomeScreen;
 
+import java.io.IOException;
+
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
@@ -81,19 +83,25 @@ public class HomeScreenController
 	{
 		//stopwatch.start();
 	}
-	
+	/*
 	//changes the screen to the new game screen
 	@FXML
 	private void handleNewGame()
 	{
 		
 	}
-	
+	*/
 	//changes the screen to the workshop screen
 	@FXML
 	private void handleContinue()
 	{
 		
+	}
+	
+	@FXML
+	private void handleStartGame() throws IOException
+	{
+		Main.showLaunchScreen();
 	}
 	
 	public void setMainApp(Main mainApp) 
