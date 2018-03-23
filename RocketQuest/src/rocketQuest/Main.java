@@ -164,7 +164,7 @@ public class Main extends Application
 				break;
 		}
 	}
-	
+	//
 	public void newNoseCapEquipped(int tier)
 	{
 		noseCapImgString = ("n" + String.valueOf(tier));
