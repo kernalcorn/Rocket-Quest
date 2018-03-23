@@ -5,18 +5,19 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rocketQuest.LaunchScreen.LaunchScreenController">
    <children>
       <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/launchbackground.png" />
+            <Image url="@../../../images/MiscStuff/launchbackground.png" />
          </image></ImageView>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
             <ImageView fitHeight="77.0" fitWidth="139.0" layoutX="36.0" layoutY="22.0" onMouseClicked="#handleWorkshopSwitch" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/workshopbutton.png" />
+                  <Image url="@../../../images/MiscStuff/workshopbutton.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="143.0" fitWidth="149.0" layoutX="225.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
@@ -24,8 +25,16 @@
                   <Image url="@../../../../../../Documents/Rocket%20Quest/Rocket%20PNGS/b1n1f1.png" />
                </image>
             </ImageView>
-            <Label layoutX="414.0" layoutY="36.0" text="Height:" textFill="WHITE" />
+            <Label layoutX="414.0" layoutY="36.0" text="Height:" textFill="WHITE">
+               <font>
+                  <Font name="Segoe MDL2 Assets" size="12.0" />
+               </font></Label>
             <Label layoutX="468.0" layoutY="36.0" text="Label" textFill="WHITE" />
+            <ImageView fitHeight="96.0" fitWidth="70.0" layoutX="43.0" layoutY="448.0" onMouseClicked="#handleLaunch" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/MiscStuff/gobutton.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,9 +16,8 @@
          <children>
             <ImageView fitHeight="82.0" fitWidth="93.0" layoutX="96.0" layoutY="14.0" onMouseClicked="#handleWorkshopSwitch" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/workshopbutton.png" />
+                  <Image url="@../../../images/MiscStuff/workshopbutton.png" />
                </image></ImageView>
-            <ImageView fx:id="imgMoney" fitHeight="50.0" fitWidth="200.0" layoutX="290.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="imgPartStats" fitHeight="100.0" fitWidth="200.0" layoutX="536.0" pickOnBounds="true" preserveRatio="true" />
             <VBox layoutX="14.0" layoutY="86.0" prefHeight="315.0" prefWidth="575.0">
                <children>
@@ -40,12 +40,12 @@
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="60.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
                         <ImageView fx:id="imgBodyT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBodyT2" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/b2button.png" />
+                              <Image url="@../../../images/MiscStuff/b2button.png" />
                            </image></ImageView>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="60.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
                         <ImageView fx:id="imgBodyT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBodyT3" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/b3button.png" />
+                              <Image url="@../../../images/MiscStuff/b3button.png" />
                            </image></ImageView>
                      </children>
                   </HBox>
@@ -79,12 +79,12 @@
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
                         <ImageView fx:id="imgNoseT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleNoseT2" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/n2button.png" />
+                              <Image url="@../../../images/MiscStuff/n2button.png" />
                            </image></ImageView>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
                         <ImageView fx:id="imgNoseT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleNoseT3" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/n3button.png" />
+                              <Image url="@../../../images/MiscStuff/n3button.png" />
                            </image></ImageView>
                      </children>
                   </HBox>
@@ -96,17 +96,18 @@
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
                         <ImageView fx:id="imgFinsT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleFinsT2" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/f2button.png" />
+                              <Image url="@../../../images/MiscStuff/f2button.png" />
                            </image></ImageView>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
                         <ImageView fx:id="imgFinsT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleFinsT3" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/f3button.png" />
+                              <Image url="@../../../images/MiscStuff/f3button.png" />
                            </image></ImageView>
                      </children>
                   </HBox>
                </children>
             </VBox>
+            <Label layoutX="354.0" layoutY="42.0" text="\$0000000000" />
          </children>
       </AnchorPane>
    </children>

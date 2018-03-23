@@ -13,7 +13,7 @@
             <ImageView fx:id="imgNewGame" fitHeight="60.0" fitWidth="250.0" layoutX="175.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="imgContinue" fitHeight="116.0" fitWidth="144.0" layoutX="244.0" layoutY="252.0" onMouseClicked="#handleStartGame" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/startgamebutton.png" />
+                  <Image url="@../../../images/MiscStuff/startgamebutton.png" />
                </image></ImageView>
             <ImageView fx:id="imgLogo" fitHeight="133.0" fitWidth="421.0" layoutX="91.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" />
          </children>

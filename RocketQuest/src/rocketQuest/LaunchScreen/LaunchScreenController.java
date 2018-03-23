@@ -86,6 +86,10 @@ public class LaunchScreenController {
 		Main.showWorkshopScreen();
 	}
 	
+	public void handleLaunch()
+	{
+		
+	}
 	public void setMainApp(Main mainApp) 
 	{
 		this.mainApp = mainApp;
