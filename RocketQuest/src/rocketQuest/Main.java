@@ -129,7 +129,6 @@ public class Main extends Application
 		
 		switch (tier) {
 			case 1:
-				
 				break;
 			case 2:
 				break;
@@ -164,7 +163,7 @@ public class Main extends Application
 				break;
 		}
 	}
-	//
+	
 	public void newNoseCapEquipped(int tier)
 	{
 		noseCapImgString = ("n" + String.valueOf(tier));
@@ -197,8 +196,6 @@ public class Main extends Application
 		return ("file:images/RocketPNGS/" + rocketImage + ".png");
 	}
 }
-
-
 
 
 
