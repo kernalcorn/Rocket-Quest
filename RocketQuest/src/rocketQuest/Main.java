@@ -14,6 +14,7 @@ import rocketQuest.PartClasses.Body;
 import rocketQuest.PartClasses.Booster;
 import rocketQuest.PartClasses.Fins;
 import rocketQuest.PartClasses.NoseCap;
+import rocketQuest.PartClasses.Rocket;
 import rocketQuest.PartClasses.Tank;
 
 public class Main extends Application
@@ -112,7 +113,7 @@ public class Main extends Application
 	Tank tier2Tank = new Tank(1, 1, 2, "T2", 1);
 	Tank tier3Tank = new Tank(1, 1, 3, "T3", 1);
 	
-	Date date = new Date();
+	Rocket playerRocket = new Rocket(tier1Body, tier1Tank, tier1Booster, tier1NoseCap, tier1Fins);
 	
 	String bodyImgString = "b1";
 	String noseCapImgString = "n1";
@@ -120,12 +121,16 @@ public class Main extends Application
 	
 	String rocketImage = bodyImgString + noseCapImgString + finsImgString;
 	
+	Date date = new Date();
+	
 	Save gameSave = new Save(date, 0, 0, 1, 1, 1, 1, 1, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
 	
 	public void newBodyEquipped(int tier)
 	{
-		bodyImgString = ("b" + String.valueOf(tier));
-		rocketImage = bodyImgString + noseCapImgString + finsImgString;
+		//bodyImgString = ("b" + String.valueOf(tier));
+		//rocketImage = bodyImgString + noseCapImgString + finsImgString;
+		
+		playerRocket.setBody(tier1Body, 1);
 		
 		switch (tier) {
 			case 1:
@@ -151,23 +156,27 @@ public class Main extends Application
 	
 	public void newFinsEquipped(int tier)
 	{
-		finsImgString = ("f" + String.valueOf(tier));
-		rocketImage = bodyImgString + noseCapImgString + finsImgString;
+		//finsImgString = ("f" + String.valueOf(tier));
+		//rocketImage = bodyImgString + noseCapImgString + finsImgString;
+		//playerRocket.setFins(fins, tier);
 		
 		switch (tier) {
 			case 1:
+				
 				break;
 			case 2:
+				
 				break;
 			case 3:
+				
 				break;
 		}
 	}
 	
 	public void newNoseCapEquipped(int tier)
 	{
-		noseCapImgString = ("n" + String.valueOf(tier));
-		rocketImage = bodyImgString + noseCapImgString + finsImgString;
+		//noseCapImgString = ("n" + String.valueOf(tier));
+		//rocketImage = bodyImgString + noseCapImgString + finsImgString;
 		
 		switch (tier) {
 			case 1:

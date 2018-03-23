@@ -60,27 +60,35 @@ public class Save
 		this.finsT2 = finsT2;
 		this.finsT3 = finsT3;
 	}
+	
 	public Date getDateSaved() {
 		return dateSaved;
 	}
+	
 	public void setDateSaved(Date dateSaved) {
 		this.dateSaved = dateSaved;
 	}
+	
 	public int getMoney() {
 		return money;
 	}
+	
 	public void setMoney(int money) {
 		this.money = money;
 	}
+	
 	public int getHighScore() {
 		return highScore;
 	}
+	
 	public void setHighScore(int highScore) {
 		this.highScore = highScore;
 	}
+	
 	public int getEquippedBody() {
 		return equippedBody;
 	}
+	
 	public void setEquippedBody(int equippedBody) {
 		this.equippedBody = equippedBody;
 	}

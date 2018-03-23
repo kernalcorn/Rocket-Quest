@@ -165,6 +165,7 @@ public class WorkshopScreenController
 	private void handleBodyT1()
 	{
 		//Main.newBodyEquipped(1);
+		mainApp.newBodyEquipped(1);
 	}
 	
 	@FXML
