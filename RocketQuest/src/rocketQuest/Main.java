@@ -9,7 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-//import rocketQuest.Database.Save;
+import rocketQuest.Database.Save;
 import rocketQuest.PartClasses.Body;
 import rocketQuest.PartClasses.Booster;
 import rocketQuest.PartClasses.Fins;
@@ -120,7 +120,7 @@ public class Main extends Application
 	
 	String rocketImage = bodyImgString + noseCapImgString + finsImgString;
 	
-	//Save gameSave = new Save(date, 0, 0, 1, 1, 1, 1, 1, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
+	Save gameSave = new Save(date, 0, 0, 1, 1, 1, 1, 1, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
 	
 	public void newBodyEquipped(int tier)
 	{
@@ -129,7 +129,6 @@ public class Main extends Application
 		
 		switch (tier) {
 			case 1:
-				
 				break;
 			case 2:
 				break;

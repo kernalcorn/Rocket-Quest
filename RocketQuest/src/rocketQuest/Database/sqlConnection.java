@@ -1,4 +1,4 @@
-package rocketQuest;
+package rocketQuest.Database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

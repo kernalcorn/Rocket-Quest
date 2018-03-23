@@ -164,8 +164,7 @@ public class WorkshopScreenController
 	@FXML
 	private void handleBodyT1()
 	{
-		//set Tier 1 body to own
-		//subtract cost of Tier 1 body
+		//Main.newBodyEquipped(1);
 	}
 	
 	@FXML
