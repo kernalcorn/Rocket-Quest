@@ -18,79 +18,79 @@
             <Label layoutX="313.0" layoutY="357.0" text="Booster" />
             <Label layoutX="308.0" layoutY="436.0" text="Nose Cap" />
             <Label layoutX="323.0" layoutY="500.0" text="Fins" />
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="222.0" onMouseClicked="#handleBodyT1" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number1.png" />
+                  <Image url="@../../../images/MiscStuff/number1.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number2.png" />
+                  <Image url="@../../../images/MiscStuff/number2.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number3.png" />
+                  <Image url="@../../../images/MiscStuff/number3.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number1.png" />
+                  <Image url="@../../../images/MiscStuff/number1.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number1.png" />
+                  <Image url="@../../../images/MiscStuff/number1.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number1.png" />
+                  <Image url="@../../../images/MiscStuff/number1.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number1.png" />
+                  <Image url="@../../../images/MiscStuff/number1.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number2.png" />
+                  <Image url="@../../../images/MiscStuff/number2.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number2.png" />
+                  <Image url="@../../../images/MiscStuff/number2.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number2.png" />
+                  <Image url="@../../../images/MiscStuff/number2.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number2.png" />
+                  <Image url="@../../../images/MiscStuff/number2.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number3.png" />
+                  <Image url="@../../../images/MiscStuff/number3.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number3.png" />
+                  <Image url="@../../../images/MiscStuff/number3.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number3.png" />
+                  <Image url="@../../../images/MiscStuff/number3.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Misc%20Stuff/number3.png" />
+                  <Image url="@../../../images/MiscStuff/number3.png" />
                </image>
             </ImageView>
             <Label layoutX="35.0" layoutY="131.0" text="\$0000000000" />
@@ -109,7 +109,7 @@
             </ImageView>
             <ImageView fitHeight="203.0" fitWidth="200.0" layoutX="61.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Rocket%20PNGS/b3n3f3.png" />
+                  <Image url="@../../../images/RocketPNGS/b3n3f3.png" />
                </image>
             </ImageView>
             <Label layoutX="23.0" layoutY="427.0" text="Capacity:" />

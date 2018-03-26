@@ -22,7 +22,7 @@
             </ImageView>
             <ImageView fitHeight="143.0" fitWidth="149.0" layoutX="225.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Documents/Rocket%20Quest/Rocket%20PNGS/b1n1f1.png" />
+                  <Image url="@../../../images/RocketPNGS/b1n1f1.png" />
                </image>
             </ImageView>
             <Label layoutX="414.0" layoutY="36.0" text="Height:" textFill="WHITE">
