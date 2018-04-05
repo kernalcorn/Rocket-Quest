@@ -61,6 +61,14 @@ public class Save
 		this.finsT3 = finsT3;
 	}
 	
+	
+	
+	public Save() {
+		super();
+	}
+
+
+
 	public Date getDateSaved() {
 		return dateSaved;
 	}

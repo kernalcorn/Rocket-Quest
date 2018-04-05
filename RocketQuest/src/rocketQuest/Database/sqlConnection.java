@@ -16,39 +16,9 @@ public class sqlConnection
  	private Connection connect = null;
  	private Statement statement = null;
  	private PreparedStatement preparedStatement = null;
- 	private ResultSet gamesResultSet = null;
- 	private ResultSet savestatesResultSet = null;
+ 	private ResultSet resultSet = null;
  	
- 	public void readDatabase() throws Exception
- 	{
- 		try 
- 		{
- 			//loads the mysql driver
- 			Class.forName("com.mysql.jdbc.Driver");
- 			
- 			//sets connection with the Database
- 			connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/rocketquest?" + "user=root&password=ruby21400");
- 			
- 			//
- 			statement = connect.createStatement();
- 			
- 			//
- 			gamesResultSet = statement.executeQuery("select * from rocketquest.games");
- 			savestatesResultSet = statement.executeQuery("select * from rocketquest.savestate");
- 			
- 			
- 		}
- 		catch(Exception e)
- 		{
- 			throw e;
- 		}
- 		finally
- 		{
- 			closeGames();
- 		}
- 	}
- 	
- 	private void writeGamesResultSet(ResultSet games) throws SQLException 
+ 	private void readGamesResultSet(ResultSet games) throws SQLException 
  	{
  		// ResultSet is initially before the first data set
  		while (games.next()) 
@@ -69,8 +39,10 @@ public class sqlConnection
  		}
  	}
  	
- 	private void writeSavestateResultSet(ResultSet savestate) throws SQLException
+ 	public Save readSavestateResultSet(ResultSet savestate) throws SQLException
  	{
+ 		openConnection("SELECT * FROM savestates ORDER BY DateSaved DESC LIMIT 1");
+ 		Save save = new Save();
  		while (savestate.next())
  		{
  			Date dateSaved = savestate.getDate("DateSaved");
@@ -97,26 +69,29 @@ public class sqlConnection
  			boolean finsT2 = savestate.getBoolean("FinsT2");
  			boolean finsT3 = savestate.getBoolean("FinsT3");
  			
+ 			save = new Save(dateSaved, money, highScore, equippedBody, equippedTank, equippedBooster, equippedNoseCap, equippedFins, bodyT1, bodyT2, bodyT3, tankT1, tankT2, tankT3, boosterT1, boosterT2, boosterT3, noseCapT1, noseCapT2, noseCapT3, finsT1, finsT2, finsT3);
  		}
+ 		
+ 		closeConnection();
+ 		
+ 		return save;
  	}
  	
- 	private void closeGames() {
-        try {
-            if (gamesResultSet != null) {
-                gamesResultSet.close();
-            }
-
-            if (statement != null) {
-                statement.close();
-            }
-
-            if (connect != null) {
-                connect.close();
-            }
-        } catch (Exception e) {
-
-        }
-    }
+ 	//must always be called with appropriate query before using a database
+ 	private void openConnection(String query) throws SQLException
+	{
+ 		connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/rocketquest?" + "user=root&password=ruby21400");
+		statement = connect.createStatement();
+		resultSet = statement.executeQuery(query);
+	}
+ 	
+ 	//must always use after data has been pulled or entered into database
+ 	private void closeConnection() throws SQLException
+ 	{
+ 		resultSet.close();
+ 		statement.close();
+ 		connect.close();
+ 	}
 
 	 	
 }
