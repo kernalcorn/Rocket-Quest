@@ -128,7 +128,7 @@ public class Main extends Application
 		//bodyImgString = ("b" + String.valueOf(tier));
 		//rocketImage = bodyImgString + noseCapImgString + finsImgString;
 		
-		playerRocket.setBody(tier1Body, 1);
+		//playerRocket.setBody(tier1Body, 1);
 		
 		switch (tier) {
 			case 1:

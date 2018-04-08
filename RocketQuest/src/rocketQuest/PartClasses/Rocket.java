@@ -36,11 +36,8 @@ public class Rocket
 		return body;
 	}
 
-	public void setBody(Body body, int tier) {
+	public void setBody(Body body) {
 		this.body = body;
-		this.bodyImgString = ("b" + String.valueOf(tier));
-		imagePath = bodyImgString + noseCapImgString + finsImgString;
-		System.out.println(imagePath);
 	}
 
 	public Tank getTank() {
