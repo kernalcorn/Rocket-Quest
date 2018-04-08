@@ -23,72 +23,72 @@
                   <Image url="@../../../images/MiscStuff/number1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="222.0" onMouseClicked="#handleBodyT2" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/number2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="222.0" onMouseClicked="#handleBodyT3" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/number3.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="291.0" onMouseClicked="#handleTankT1" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/number1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="357.0" onMouseClicked="#handleBoostT1" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/number1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="427.0" onMouseClicked="#handleNoseT1" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/number1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="491.0" onMouseClicked="#handleFinsT1" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/number1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="291.0" onMouseClicked="#handleTankT2" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/number2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="357.0" onMouseClicked="#handleBoostT2" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/number2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="427.0" onMouseClicked="#handleNoseT2" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/number2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="491.0" onMouseClicked="#handleFinsT2" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/number2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="291.0" onMouseClicked="#handleTankT3" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/number3.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="357.0" onMouseClicked="#handleBoostT3" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/number3.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="427.0" onMouseClicked="#handleNoseT3" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/number3.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="491.0" onMouseClicked="#handleFinsT3" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/number3.png" />
                </image>
@@ -107,7 +107,7 @@
                   <Image url="@../../../images/MiscStuff/shopbutton.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="203.0" fitWidth="200.0" layoutX="61.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgRocket" fitHeight="203.0" fitWidth="200.0" layoutX="61.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/RocketPNGS/b3n3f3.png" />
                </image>

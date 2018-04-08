@@ -1,12 +1,15 @@
 package rocketQuest.WorkshopScreen;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import rocketQuest.Main;
+import rocketQuest.Database.DbConnection;
+import rocketQuest.Database.Save;
 
 
 public class WorkshopScreenController 
@@ -25,6 +28,9 @@ public class WorkshopScreenController
 	
 	@FXML
 	private ImageView imgPartStats;
+	
+	@FXML
+	private ImageView imgRocket;
 	
 	@FXML
 	private ImageView imgTier1;
@@ -95,6 +101,12 @@ public class WorkshopScreenController
 	@FXML
 	private ImageView imgFinsT3;
 	
+	//creating our database connection object
+	DbConnection rocketQuestDB = new DbConnection();
+	
+	Save playerSave = new Save();
+	
+	String rocketConfig;
 	
 	public WorkshopScreenController()
 	{
@@ -145,9 +157,13 @@ public class WorkshopScreenController
 	};
 	
 	@FXML
-	private void initialize()
+	private void initialize() throws SQLException
 	{
-		
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		rocketConfig = "b" + String.valueOf(playerSave.getEquippedBody()) + 
+					   "n" + String.valueOf(playerSave.getEquippedNoseCap()) + 
+					   "f" + String.valueOf(playerSave.getEquippedFins());
+		imgRocket.setImage(new Image("file:images/RocketPNGS/" + rocketConfig + ".png"));
 	}
 	
 	@FXML
@@ -162,116 +178,252 @@ public class WorkshopScreenController
 		Main.showLaunchScreen();
 	}
 	@FXML
-	private void handleBodyT1()
+	private void handleBodyT1() throws SQLException
 	{
-		//Main.newBodyEquipped(1);
-		mainApp.newBodyEquipped(1);
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 1 body is owned and not equipped
+		if((playerSave.getEquippedBody() != 1) && playerSave.isBodyT1())
+		{
+			//changes equipped body to 1, pushes to database and updates rocket image
+			playerSave.setEquippedBody(1);
+			rocketQuestDB.newSave(playerSave);
+			updateRocketImage();
+		}
 	}
 	
 	@FXML
-	private void handleBodyT2()
+	private void handleBodyT2() throws SQLException
 	{
-		//set Tier 2 body to own
-		//subtract cost of Tier 2 body
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 2 body is owned and not equipped
+		if((playerSave.getEquippedBody() != 2) && playerSave.isBodyT2())
+		{
+			//changes equipped body to 2, pushes to database and updates rocket image
+			playerSave.setEquippedBody(2);
+			rocketQuestDB.newSave(playerSave);
+			updateRocketImage();
+		}
 	}
 	
 	@FXML
-	private void handleBodyT3()
+	private void handleBodyT3() throws SQLException
 	{
-		//set Tier 3 body to own
-		//subtract cost of Tier 3 body
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 3 body is owned and not equipped
+		if((playerSave.getEquippedBody() != 3) && playerSave.isBodyT3())
+		{
+			//changes equipped body to 3, pushes to database and updates rocket image
+			playerSave.setEquippedBody(3);
+			rocketQuestDB.newSave(playerSave);
+			updateRocketImage();
+		}
 	}
 	
 	@FXML
-	private void handleTankT1()
+	private void handleTankT1() throws SQLException
 	{
-		//set Tier 1 tank to own
-		//subtract cost of Tier 1 tank
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 1 tank is owned and not equipped
+		if((playerSave.getEquippedTank() != 1) && playerSave.isTankT1())
+		{
+			//changes equipped tank to 1 and pushes to database
+			playerSave.setEquippedTank(1);
+			rocketQuestDB.newSave(playerSave);
+		}
 	}
 	
 	@FXML
-	private void handleTankT2()
+	private void handleTankT2() throws SQLException
 	{
-		//set Tier 2 tank to own
-		//subtract cost of Tier 2 tank
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 2 tank is owned and not equipped
+		if((playerSave.getEquippedTank() != 2) && playerSave.isTankT2())
+		{
+			//changes equipped tank to 1 and pushes to database
+			playerSave.setEquippedTank(2);
+			rocketQuestDB.newSave(playerSave);
+		}
 	}
 	
 	@FXML
-	private void handleTankT3()
+	private void handleTankT3() throws SQLException
 	{
-		//set Tier 3 tank to own
-		//subtract cost of Tier 3 tank
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 3 tank is owned and not equipped
+		if((playerSave.getEquippedTank() != 3) && playerSave.isTankT3())
+		{
+			//changes equipped tank to 1 and pushes to database
+			playerSave.setEquippedTank(3);
+			rocketQuestDB.newSave(playerSave);
+		}
 	}
 	
 	@FXML
-	private void handleBoostT1()
+	private void handleBoostT1() throws SQLException
 	{
-		//set Tier 1 booster to own
-		//subtract cost of Tier 1 booster
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 1 booster is owned and not equipped
+		if((playerSave.getEquippedBooster() != 1) && playerSave.isBoosterT1())
+		{
+			//changes equipped booster to 1 and pushes to database
+			playerSave.setEquippedBooster(1);
+			rocketQuestDB.newSave(playerSave);
+		}
 	}
 	
 	@FXML
-	private void handleBoostT2()
+	private void handleBoostT2() throws SQLException
 	{
-		//set Tier 2 booster to own
-		//subtract cost of Tier 2 booster
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 2 booster is owned and not equipped
+		if((playerSave.getEquippedBooster() != 2) && playerSave.isBoosterT2())
+		{
+			//changes equipped booster to 1 and pushes to database
+			playerSave.setEquippedBooster(2);
+			rocketQuestDB.newSave(playerSave);
+		}
 	}
 	
 	@FXML
-	private void handleBoostT3()
+	private void handleBoostT3() throws SQLException
 	{
-		//set Tier 3 booster to own
-		//subtract cost of Tier 3 booster
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 3 booster is owned and not equipped
+		if((playerSave.getEquippedBooster() != 3) && playerSave.isBoosterT3())
+		{
+			//changes equipped booster to 3 and pushes to database
+			playerSave.setEquippedBooster(3);
+			rocketQuestDB.newSave(playerSave);
+		}
 	}
 	
 	@FXML
-	private void handleNoseT1()
+	private void handleNoseT1() throws SQLException
 	{
-		//set Tier 1 nose cap to own
-		//subtract cost of Tier 1 nose cap
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 1 nose is owned and not equipped
+		if((playerSave.getEquippedNoseCap() != 1) && playerSave.isNoseCapT1())
+		{
+			//changes equipped nose to 1, pushes to database and updates rocket image
+			playerSave.setEquippedNoseCap(1);
+			rocketQuestDB.newSave(playerSave);
+			updateRocketImage();
+		}
 	}
 	
 	@FXML
-	private void handleNoseT2()
+	private void handleNoseT2() throws SQLException
 	{
-		//set Tier 2 nose cap to own
-		//subtract cost of Tier 2 nose cap
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 2 nose is owned and not equipped
+		if((playerSave.getEquippedNoseCap() != 2) && playerSave.isNoseCapT2())
+		{
+			//changes equipped nose to 2, pushes to database and updates rocket image
+			playerSave.setEquippedNoseCap(2);
+			rocketQuestDB.newSave(playerSave);
+			updateRocketImage();
+		}
 	}
 	
 	@FXML
-	private void handleNoseT3()
+	private void handleNoseT3() throws SQLException
 	{
-		//set Tier 3 nose cap to own
-		//subtract cost of Tier 3 nose cap
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 3 nose is owned and not equipped
+		if((playerSave.getEquippedNoseCap() != 3) && playerSave.isNoseCapT3())
+		{
+			//changes equipped nose to 3, pushes to database and updates rocket image
+			playerSave.setEquippedNoseCap(3);
+			rocketQuestDB.newSave(playerSave);
+			updateRocketImage();
+		}
 	}
 	
 	@FXML
-	private void handleFinsT1()
+	private void handleFinsT1() throws SQLException
 	{
-		//set Tier 1 fins to own
-		//subtract cost of Tier 1 fins
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 1 fins is owned and not equipped
+		if((playerSave.getEquippedFins() != 1) && playerSave.isFinsT1())
+		{
+			//changes equipped fins to 1, pushes to database and updates rocket image
+			playerSave.setEquippedFins(1);
+			rocketQuestDB.newSave(playerSave);
+			updateRocketImage();
+		}
 	}
 	
 	@FXML
-	private void handleFinsT2()
+	private void handleFinsT2() throws SQLException
 	{
-		//set Tier 2 fins to own
-		//subtract cost of Tier 2 fins
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 2 fins is owned and not equipped
+		if((playerSave.getEquippedFins() != 2) && playerSave.isFinsT2())
+		{
+			//changes equipped fins to 2, pushes to database and updates rocket image
+			playerSave.setEquippedFins(2);
+			rocketQuestDB.newSave(playerSave);
+			updateRocketImage();
+		}
 	}
 	
 	@FXML
-	private void handleFinsT3()
+	private void handleFinsT3() throws SQLException
 	{
-		//set Tier 3 fins to own
-		//subtract cost of Tier 3 fins
+		//get database values
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		
+		//check if tier 3 fins is owned and not equipped
+		if((playerSave.getEquippedFins() != 3) && playerSave.isFinsT3())
+		{
+			//changes equipped fins to 3, pushes to database and updates rocket image
+			playerSave.setEquippedFins(3);
+			rocketQuestDB.newSave(playerSave);
+			updateRocketImage();
+		}
 	}
-	
 	
 	public void setMainApp(Main mainApp) 
 	{
 		this.mainApp = mainApp;
 	}
 	
+	public void updateRocketImage() throws SQLException
+	{
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		rocketConfig = "b" + String.valueOf(playerSave.getEquippedBody()) + 
+					   "n" + String.valueOf(playerSave.getEquippedNoseCap()) + 
+					   "f" + String.valueOf(playerSave.getEquippedFins());
+		imgRocket.setImage(new Image("file:images/RocketPNGS/" + rocketConfig + ".png"));
+	}
 }
 
 

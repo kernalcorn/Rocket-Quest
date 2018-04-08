@@ -1,12 +1,15 @@
 package rocketQuest.HomeScreen;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import rocketQuest.Main;
+import rocketQuest.Database.DbConnection;
+import rocketQuest.Database.Save;
 
 
 public class HomeScreenController 
@@ -26,9 +29,7 @@ public class HomeScreenController
 	@FXML
 	private ImageView imgLogo;
 	
-	
-	String[] testFrames = {"file:src/images/TEST1.png", "file:src/images/TEST2", "file:src/images/TEST3", "file:src/images/TEST4", 
-						   "file:src/images/TEST5", "file:src/images/TEST6", "file:src/images/TEST7", "file:src/images/TEST8"};
+	DbConnection database = new DbConnection();
 	
 	public HomeScreenController()
 	{
@@ -56,7 +57,7 @@ public class HomeScreenController
 			{
 				tickerTime++;
 				
-				imgBackground.setImage(new Image(testFrames[elapsedseconds]));
+				//imgBackground.setImage(new Image(testFrames[elapsedseconds]));
 				
 				if(elapsedseconds == 8)
 				{
@@ -99,7 +100,7 @@ public class HomeScreenController
 	}
 	
 	@FXML
-	private void handleStartGame() throws IOException
+	private void handleStartGame() throws IOException, SQLException
 	{
 		Main.showLaunchScreen();
 	}

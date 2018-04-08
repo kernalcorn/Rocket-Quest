@@ -121,9 +121,7 @@ public class Main extends Application
 	
 	String rocketImage = bodyImgString + noseCapImgString + finsImgString;
 	
-	Date date = new Date();
-	
-	Save gameSave = new Save(date, 0, 0, 1, 1, 1, 1, 1, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
+	Save gameSave = new Save(0, 0, 0, 1, 1, 1, 1, 1, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
 	
 	public void newBodyEquipped(int tier)
 	{

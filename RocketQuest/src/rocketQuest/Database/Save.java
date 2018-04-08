@@ -1,10 +1,11 @@
 package rocketQuest.Database;
 
+import java.sql.SQLException;
 import java.util.Date;
 
 public class Save 
 {
-	private Date dateSaved;
+	private int slot;
 	private int money;
 	private int highScore;
 	private int equippedBody;
@@ -30,13 +31,13 @@ public class Save
 	
 	
 	
-	public Save(Date dateSaved, int money, int highScore, int equippedBody, int equippedTank, int equippedBooster,
+	public Save(int slot, int money, int highScore, int equippedBody, int equippedTank, int equippedBooster,
 			int equippedNoseCap, int equippedFins, boolean bodyT1, boolean bodyT2, boolean bodyT3, boolean tankT1,
 			boolean tankT2, boolean tankT3, boolean boosterT1, boolean boosterT2, boolean boosterT3, boolean noseCapT1,
 			boolean noseCapT2, boolean noseCapT3, boolean finsT1, boolean finsT2, boolean finsT3) 
 	{
 		super();
-		this.dateSaved = dateSaved;
+		this.slot = slot;
 		this.money = money;
 		this.highScore = highScore;
 		this.equippedBody = equippedBody;
@@ -69,12 +70,12 @@ public class Save
 
 
 
-	public Date getDateSaved() {
-		return dateSaved;
+	public int getSlot() {
+		return slot;
 	}
 	
-	public void setDateSaved(Date dateSaved) {
-		this.dateSaved = dateSaved;
+	public void setSlot(int slot) {
+		this.slot = slot;
 	}
 	
 	public int getMoney() {
@@ -213,6 +214,52 @@ public class Save
 	}
 	public void setFinsT3(boolean finsT3) {
 		this.finsT3 = finsT3;
+	}
+	
+	public void getData() throws SQLException
+	{
+		DbConnection rocketQuestDB = new DbConnection();
+		Save gameData = new Save();
+		gameData = rocketQuestDB.readSavestateResultSet();
+		//setting info fields with updates values
+		setSlot(gameData.getSlot());
+		setMoney(gameData.getMoney());
+		setHighScore(gameData.getHighScore());
+		//setting equipped fields with updated values
+		setEquippedBody(gameData.getEquippedBody());
+		setEquippedTank(gameData.getEquippedTank());
+		setEquippedBooster(gameData.getEquippedBooster());
+		setEquippedNoseCap(gameData.getEquippedNoseCap());
+		setEquippedFins(gameData.getEquippedFins());
+		//setting ownage fields with updated values
+		setBodyT1(gameData.isBodyT1());
+		setBodyT2(gameData.isBodyT2());
+		setBodyT3(gameData.isBodyT3());
+		setTankT1(gameData.isTankT1());
+		setTankT2(gameData.isTankT2());
+		setTankT3(gameData.isTankT3());
+		setBoosterT1(gameData.isBoosterT1());
+		setBoosterT2(gameData.isBoosterT2());
+		setBoosterT3(gameData.isBoosterT3());
+		setNoseCapT1(gameData.isNoseCapT1());
+		setNoseCapT2(gameData.isNoseCapT2());
+		setNoseCapT3(gameData.isNoseCapT3());
+		setFinsT1(gameData.isFinsT1());
+		setFinsT2(gameData.isFinsT2());
+		setFinsT3(gameData.isFinsT3());
+	}
+	
+	public void pushData() throws SQLException
+	{
+		DbConnection rocketQuestDB = new DbConnection();
+		Save gameData = new Save(slot, money, highScore, 
+				 				 equippedBody, equippedTank, equippedBooster, equippedNoseCap, equippedFins, 
+				 				 bodyT1, bodyT2, bodyT3, 
+				 				 tankT1, tankT2, tankT3, 
+				 				 boosterT1, boosterT2, boosterT3, 
+				 				 noseCapT1, noseCapT2, noseCapT3, 
+				 				 finsT1, finsT2, finsT3);
+		rocketQuestDB.newSave(gameData);
 	}
 }
 
