@@ -2,6 +2,10 @@ package rocketQuest.LaunchScreen;
 
 import rocketQuest.Main;
 import javafx.animation.AnimationTimer;
+import javafx.animation.PathTransition;
+import javafx.animation.SequentialTransition;
+import javafx.animation.TranslateTransition;
+
 import java.io.IOException;
 import rocketQuest.Main;
 import javafx.animation.AnimationTimer;
@@ -10,6 +14,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
+import javafx.scene.text.Text;
+import javafx.util.Duration;
 
 public class LaunchScreenController {
 
@@ -29,6 +37,10 @@ public class LaunchScreenController {
 	
 	@FXML
 	private Label lblScore;
+	
+	@FXML
+	private ImageView imgLaunch;
+	
 	
 	AnimationTimer stopwatch = new AnimationTimer() 
 	{
@@ -88,7 +100,18 @@ public class LaunchScreenController {
 	
 	public void handleLaunch()
 	{
+		TranslateTransition transition = new TranslateTransition();
+		transition.setDuration(Duration.seconds(5));
+		transition.setNode(imgRocket);
+		transition.setToY(-400);
 		
+		TranslateTransition transition2 = new TranslateTransition();
+		transition2.setDuration(Duration.seconds(2));
+		transition2.setNode(imgRocket);
+		transition2.setToY(+10);
+		
+		SequentialTransition move = new SequentialTransition(transition, transition2);
+		move.play();
 	}
 	public void setMainApp(Main mainApp) 
 	{
