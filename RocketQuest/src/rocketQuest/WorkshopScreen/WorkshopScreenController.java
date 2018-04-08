@@ -2,7 +2,6 @@ package rocketQuest.WorkshopScreen;
 
 import java.io.IOException;
 import java.sql.SQLException;
-
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
