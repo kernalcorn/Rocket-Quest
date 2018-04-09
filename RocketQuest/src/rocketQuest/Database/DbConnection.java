@@ -18,22 +18,6 @@ public class DbConnection
  	private PreparedStatement preparedStatement = null;
  	private ResultSet resultSet = null;
  	
- 	private void readGamesResultSet(ResultSet games) throws SQLException 
- 	{
- 		while (games.next()) 
- 		{
- 			
- 			String playerName = games.getString("PlayerName");
- 			String gender = games.getString("Gender");
- 			Date dateCreated = games.getDate("DateCreated");
- 			
- 			System.out.println("PlayerName: " + playerName);
- 			System.out.println("Gender: " + gender);
- 			System.out.println("dateCreated " + dateCreated);
- 			
- 		}
- 	}
- 	
  	public Save readSavestateResultSet() throws SQLException
  	{
  		//begins the connection to the database with the specified query

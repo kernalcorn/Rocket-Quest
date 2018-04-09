@@ -223,12 +223,15 @@ public class LaunchScreenController {
 		
 		SequentialTransition move = new SequentialTransition(transition, transition2);
 		move.play();
+		
+		heightCalc();
 		lblHeight.setText(String.valueOf(height));
 	}
 	
 	//calculates the height of the rocket for each flight based on the parts equipped in workshop
 	public void heightCalc()
 	{
+		System.out.println(String.valueOf(playerRocket.getBody().getWeight()));
 		height = (playerRocket.getFins().getStability() + playerRocket.getTank().getFuelCapacity() + ( 10 - playerRocket.getBody().getWeight()) + playerRocket.getBooster().getThrust() + (10 - playerRocket.getNoseCap().getDrag()));
 	}
 	

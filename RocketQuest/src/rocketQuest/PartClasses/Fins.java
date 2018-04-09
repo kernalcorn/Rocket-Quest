@@ -9,7 +9,7 @@ public class Fins extends RocketPart
 	}
 
 	public Fins(int weight, int price, int tier, String name, int stability) {
-		super();
+		super(weight, price, tier, name);
 		this.stability = stability;
 	}
 
