@@ -3,6 +3,12 @@ package rocketQuest.LaunchScreen;
 import rocketQuest.Main;
 import rocketQuest.Database.DbConnection;
 import rocketQuest.Database.Save;
+import rocketQuest.PartClasses.Body;
+import rocketQuest.PartClasses.Booster;
+import rocketQuest.PartClasses.Fins;
+import rocketQuest.PartClasses.NoseCap;
+import rocketQuest.PartClasses.Rocket;
+import rocketQuest.PartClasses.Tank;
 import javafx.animation.AnimationTimer;
 import javafx.animation.PathTransition;
 import javafx.animation.SequentialTransition;
@@ -50,6 +56,31 @@ public class LaunchScreenController {
 	
 	Save playerSave = new Save();
 	
+	String rocketConfig;
+	
+	//objects for rocket parts
+	Body tier1Body = new Body(9, 1, 1, "T1", 1);
+	Body tier2Body = new Body(6, 2000, 2, "T2", 1);
+	Body tier3Body = new Body(3, 5000, 3, "T3", 1);
+	
+	Booster tier1Booster = new Booster(3, 1, 1, "T1", 1);
+	Booster tier2Booster = new Booster(5, 700, 2, "T2", 1);
+	Booster tier3Booster = new Booster(8, 3000, 3, "T3", 1);
+	
+	Fins tier1Fins = new Fins(1, 1, 1, "T1", 1);
+	Fins tier2Fins = new Fins(3, 500, 2, "T2", 1);
+	Fins tier3Fins = new Fins(6, 2500, 3, "T3", 1);
+	
+	NoseCap tier1NoseCap = new NoseCap(7, 1, 1, "T1", 1);
+	NoseCap tier2NoseCap = new NoseCap(5, 1200, 2, "T2", 1);
+	NoseCap tier3NoseCap = new NoseCap(2, 4000, 3, "T3", 1);
+	
+	Tank tier1Tank = new Tank(2, 1, 1, "T1", 1);
+	Tank tier2Tank = new Tank(3, 1500, 2, "T2", 1);
+	Tank tier3Tank = new Tank(4, 4500, 3, "T3", 1);
+	
+	Rocket playerRocket = new Rocket(tier1Body, tier1Tank, tier1Booster, tier1NoseCap, tier1Fins);
+
 	AnimationTimer stopwatch = new AnimationTimer() 
 	{
 	
@@ -99,6 +130,75 @@ public class LaunchScreenController {
 	private void initialize() throws SQLException
 	{
 		playerSave = rocketQuestDB.readSavestateResultSet();
+		rocketConfig = "b" + String.valueOf(playerSave.getEquippedBody()) + 
+					   "n" + String.valueOf(playerSave.getEquippedNoseCap()) + 
+					   "f" + String.valueOf(playerSave.getEquippedFins());
+		imgRocket.setImage(new Image("file:images/RocketPNGS/" + rocketConfig + ".png"));
+		
+		//pulls currently equipped body and builds the player rocket with it
+		switch(playerSave.getEquippedBody()) {
+			case 1:
+				playerRocket.setBody(tier1Body);
+				break;
+			case 2:
+				playerRocket.setBody(tier2Body);
+				break;
+			case 3:
+				playerRocket.setBody(tier3Body);
+				break;
+		}
+		
+		//pulls currently equipped tank and builds the player rocket with it
+		switch(playerSave.getEquippedTank()) {
+			case 1:
+				playerRocket.setTank(tier1Tank);
+				break;
+			case 2:
+				playerRocket.setTank(tier2Tank);
+				break;
+			case 3:
+				playerRocket.setTank(tier3Tank);
+				break;
+		}
+		
+		//pulls currently equipped booster and builds the player rocket with it
+		switch(playerSave.getEquippedBooster()) {
+			case 1:
+				playerRocket.setBooster(tier1Booster);
+				break;
+			case 2:
+				playerRocket.setBooster(tier2Booster);
+				break;
+			case 3:
+				playerRocket.setBooster(tier3Booster);
+				break;
+		}
+		
+		//pulls currently equipped fins and builds the player rocket with it
+		switch(playerSave.getEquippedFins()) {
+			case 1:
+				playerRocket.setFins(tier1Fins);
+				break;
+			case 2:
+				playerRocket.setFins(tier2Fins);
+				break;
+			case 3:
+				playerRocket.setFins(tier3Fins);
+				break;
+		}
+		
+		//pulls currently equipped nose cap and builds the player rocket with it
+		switch(playerSave.getEquippedNoseCap()) {
+			case 1:
+				playerRocket.setNoseCap(tier1NoseCap);
+				break;
+			case 2:
+				playerRocket.setNoseCap(tier2NoseCap);
+				break;
+			case 3:
+				playerRocket.setNoseCap(tier3NoseCap);
+				break;
+		}
 	}
 	
 	public void handleWorkshopSwitch() throws IOException
