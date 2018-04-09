@@ -51,6 +51,8 @@ public class LaunchScreenController {
 	@FXML
 	private ImageView imgLaunch;
 	
+	private int height;
+	
 	//creating our database connection object
 	DbConnection rocketQuestDB = new DbConnection();
 	
@@ -206,6 +208,7 @@ public class LaunchScreenController {
 		Main.showWorkshopScreen();
 	}
 	
+	//animates the rocket up and back down when launching the rocket
 	public void handleLaunch()
 	{
 		TranslateTransition transition = new TranslateTransition();
@@ -220,7 +223,15 @@ public class LaunchScreenController {
 		
 		SequentialTransition move = new SequentialTransition(transition, transition2);
 		move.play();
+		lblHeight.setText(String.valueOf(height));
 	}
+	
+	//calculates the height of the rocket for each flight based on the parts equipped in workshop
+	public void heightCalc()
+	{
+		height = (playerRocket.getFins().getStability() + playerRocket.getTank().getFuelCapacity() + ( 10 - playerRocket.getBody().getWeight()) + playerRocket.getBooster().getThrust() + (10 - playerRocket.getNoseCap().getDrag()));
+	}
+	
 	public void setMainApp(Main mainApp) 
 	{
 		this.mainApp = mainApp;
