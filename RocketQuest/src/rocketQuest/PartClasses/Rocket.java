@@ -60,20 +60,16 @@ public class Rocket
 		return noseCap;
 	}
 
-	public void setNoseCap(NoseCap noseCap, int tier) {
+	public void setNoseCap(NoseCap noseCap) {
 		this.noseCap = noseCap;
-		this.noseCapImgString = ("n" + String.valueOf(tier));
-		imagePath = bodyImgString + noseCapImgString + finsImgString;
 	}
 
 	public Fins getFins() {
 		return fins;
 	}
 
-	public void setFins(Fins fins, int tier) {
+	public void setFins(Fins fins) {
 		this.fins = fins;
-		finsImgString = ("f" + String.valueOf(tier));
-		imagePath = bodyImgString + noseCapImgString + finsImgString;
 	}
 
 	public String getImagePath() {

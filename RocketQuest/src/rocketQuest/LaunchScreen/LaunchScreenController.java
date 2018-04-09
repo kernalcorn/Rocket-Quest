@@ -1,6 +1,8 @@
 package rocketQuest.LaunchScreen;
 
 import rocketQuest.Main;
+import rocketQuest.Database.DbConnection;
+import rocketQuest.Database.Save;
 import javafx.animation.AnimationTimer;
 import javafx.animation.PathTransition;
 import javafx.animation.SequentialTransition;
@@ -41,6 +43,10 @@ public class LaunchScreenController {
 	@FXML
 	private ImageView imgLaunch;
 	
+	//creating our database connection object
+	DbConnection rocketQuestDB = new DbConnection();
+	
+	Save playerSave = new Save();
 	
 	AnimationTimer stopwatch = new AnimationTimer() 
 	{
@@ -90,7 +96,7 @@ public class LaunchScreenController {
 	@FXML
 	private void initialize()
 	{
-		
+		playerSave = rocketQuestDB.readSavestateResultSet();
 	}
 	
 	public void handleWorkshopSwitch() throws IOException

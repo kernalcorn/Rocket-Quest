@@ -9,6 +9,12 @@ import javafx.scene.image.ImageView;
 import rocketQuest.Main;
 import rocketQuest.Database.DbConnection;
 import rocketQuest.Database.Save;
+import rocketQuest.PartClasses.Body;
+import rocketQuest.PartClasses.Booster;
+import rocketQuest.PartClasses.Fins;
+import rocketQuest.PartClasses.NoseCap;
+import rocketQuest.PartClasses.Rocket;
+import rocketQuest.PartClasses.Tank;
 
 
 public class WorkshopScreenController 
@@ -107,6 +113,29 @@ public class WorkshopScreenController
 	
 	String rocketConfig;
 	
+	//objects for rocket parts
+	Body tier1Body = new Body(9, 1, 1, "T1", 1);
+	Body tier2Body = new Body(6, 200, 2, "T2", 1);
+	Body tier3Body = new Body(3, 500, 3, "T3", 1);
+	
+	Booster tier1Booster = new Booster(3, 1, 1, "T1", 1);
+	Booster tier2Booster = new Booster(5, 70, 2, "T2", 1);
+	Booster tier3Booster = new Booster(8, 300, 3, "T3", 1);
+	
+	Fins tier1Fins = new Fins(1, 1, 1, "T1", 1);
+	Fins tier2Fins = new Fins(3, 50, 2, "T2", 1);
+	Fins tier3Fins = new Fins(6, 250, 3, "T3", 1);
+	
+	NoseCap tier1NoseCap = new NoseCap(7, 1, 1, "T1", 1);
+	NoseCap tier2NoseCap = new NoseCap(5, 120, 2, "T2", 1);
+	NoseCap tier3NoseCap = new NoseCap(2, 400, 3, "T3", 1);
+	
+	Tank tier1Tank = new Tank(2, 1, 1, "T1", 1);
+	Tank tier2Tank = new Tank(3, 150, 2, "T2", 1);
+	Tank tier3Tank = new Tank(4, 450, 3, "T3", 1);
+	
+	Rocket playerRocket = new Rocket(tier1Body, tier1Tank, tier1Booster, tier1NoseCap, tier1Fins);
+	
 	public WorkshopScreenController()
 	{
 		
@@ -187,6 +216,7 @@ public class WorkshopScreenController
 		{
 			//changes equipped body to 1, pushes to database and updates rocket image
 			playerSave.setEquippedBody(1);
+			playerRocket.setBody(tier1Body);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
 		}
@@ -203,6 +233,7 @@ public class WorkshopScreenController
 		{
 			//changes equipped body to 2, pushes to database and updates rocket image
 			playerSave.setEquippedBody(2);
+			playerRocket.setBody(tier2Body);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
 		}
@@ -219,6 +250,7 @@ public class WorkshopScreenController
 		{
 			//changes equipped body to 3, pushes to database and updates rocket image
 			playerSave.setEquippedBody(3);
+			playerRocket.setBody(tier3Body);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
 		}
@@ -235,6 +267,7 @@ public class WorkshopScreenController
 		{
 			//changes equipped tank to 1 and pushes to database
 			playerSave.setEquippedTank(1);
+			playerRocket.setTank(tier1Tank);
 			rocketQuestDB.newSave(playerSave);
 		}
 	}
@@ -248,8 +281,9 @@ public class WorkshopScreenController
 		//check if tier 2 tank is owned and not equipped
 		if((playerSave.getEquippedTank() != 2) && playerSave.isTankT2())
 		{
-			//changes equipped tank to 1 and pushes to database
+			//changes equipped tank to 2 and pushes to database
 			playerSave.setEquippedTank(2);
+			playerRocket.setTank(tier2Tank);
 			rocketQuestDB.newSave(playerSave);
 		}
 	}
@@ -263,8 +297,9 @@ public class WorkshopScreenController
 		//check if tier 3 tank is owned and not equipped
 		if((playerSave.getEquippedTank() != 3) && playerSave.isTankT3())
 		{
-			//changes equipped tank to 1 and pushes to database
+			//changes equipped tank to 3 and pushes to database
 			playerSave.setEquippedTank(3);
+			playerRocket.setTank(tier3Tank);
 			rocketQuestDB.newSave(playerSave);
 		}
 	}
@@ -280,6 +315,7 @@ public class WorkshopScreenController
 		{
 			//changes equipped booster to 1 and pushes to database
 			playerSave.setEquippedBooster(1);
+			playerRocket.setBooster(tier1Booster);
 			rocketQuestDB.newSave(playerSave);
 		}
 	}
@@ -293,8 +329,9 @@ public class WorkshopScreenController
 		//check if tier 2 booster is owned and not equipped
 		if((playerSave.getEquippedBooster() != 2) && playerSave.isBoosterT2())
 		{
-			//changes equipped booster to 1 and pushes to database
+			//changes equipped booster to 2 and pushes to database
 			playerSave.setEquippedBooster(2);
+			playerRocket.setBooster(tier2Booster);
 			rocketQuestDB.newSave(playerSave);
 		}
 	}
@@ -310,6 +347,7 @@ public class WorkshopScreenController
 		{
 			//changes equipped booster to 3 and pushes to database
 			playerSave.setEquippedBooster(3);
+			playerRocket.setBooster(tier3Booster);
 			rocketQuestDB.newSave(playerSave);
 		}
 	}
@@ -325,6 +363,7 @@ public class WorkshopScreenController
 		{
 			//changes equipped nose to 1, pushes to database and updates rocket image
 			playerSave.setEquippedNoseCap(1);
+			playerRocket.setNoseCap(tier1NoseCap);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
 		}
@@ -341,6 +380,7 @@ public class WorkshopScreenController
 		{
 			//changes equipped nose to 2, pushes to database and updates rocket image
 			playerSave.setEquippedNoseCap(2);
+			playerRocket.setNoseCap(tier2NoseCap);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
 		}
@@ -357,6 +397,7 @@ public class WorkshopScreenController
 		{
 			//changes equipped nose to 3, pushes to database and updates rocket image
 			playerSave.setEquippedNoseCap(3);
+			playerRocket.setNoseCap(tier3NoseCap);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
 		}
@@ -373,6 +414,7 @@ public class WorkshopScreenController
 		{
 			//changes equipped fins to 1, pushes to database and updates rocket image
 			playerSave.setEquippedFins(1);
+			playerRocket.setFins(tier1Fins);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
 		}
@@ -389,6 +431,7 @@ public class WorkshopScreenController
 		{
 			//changes equipped fins to 2, pushes to database and updates rocket image
 			playerSave.setEquippedFins(2);
+			playerRocket.setFins(tier2Fins);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
 		}
@@ -405,6 +448,7 @@ public class WorkshopScreenController
 		{
 			//changes equipped fins to 3, pushes to database and updates rocket image
 			playerSave.setEquippedFins(3);
+			playerRocket.setFins(tier3Fins);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
 		}
