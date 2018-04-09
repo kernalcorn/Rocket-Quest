@@ -9,6 +9,8 @@ import javafx.animation.SequentialTransition;
 import javafx.animation.TranslateTransition;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
 import rocketQuest.Main;
 import javafx.animation.AnimationTimer;
 import java.io.IOException;
@@ -94,7 +96,7 @@ public class LaunchScreenController {
 	}
 	
 	@FXML
-	private void initialize()
+	private void initialize() throws SQLException
 	{
 		playerSave = rocketQuestDB.readSavestateResultSet();
 	}

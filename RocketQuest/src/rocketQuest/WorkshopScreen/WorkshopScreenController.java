@@ -192,6 +192,71 @@ public class WorkshopScreenController
 					   "n" + String.valueOf(playerSave.getEquippedNoseCap()) + 
 					   "f" + String.valueOf(playerSave.getEquippedFins());
 		imgRocket.setImage(new Image("file:images/RocketPNGS/" + rocketConfig + ".png"));
+		
+		//pulls currently equipped body and builds the player rocket with it
+		switch(playerSave.getEquippedBody()) {
+			case 1:
+				playerRocket.setBody(tier1Body);
+				break;
+			case 2:
+				playerRocket.setBody(tier2Body);
+				break;
+			case 3:
+				playerRocket.setBody(tier3Body);
+				break;
+		}
+		
+		//pulls currently equipped tank and builds the player rocket with it
+		switch(playerSave.getEquippedTank()) {
+			case 1:
+				playerRocket.setTank(tier1Tank);
+				break;
+			case 2:
+				playerRocket.setTank(tier2Tank);
+				break;
+			case 3:
+				playerRocket.setTank(tier3Tank);
+				break;
+		}
+		
+		//pulls currently equipped booster and builds the player rocket with it
+		switch(playerSave.getEquippedBooster()) {
+			case 1:
+				playerRocket.setBooster(tier1Booster);
+				break;
+			case 2:
+				playerRocket.setBooster(tier2Booster);
+				break;
+			case 3:
+				playerRocket.setBooster(tier3Booster);
+				break;
+		}
+		
+		//pulls currently equipped fins and builds the player rocket with it
+		switch(playerSave.getEquippedFins()) {
+			case 1:
+				playerRocket.setFins(tier1Fins);
+				break;
+			case 2:
+				playerRocket.setFins(tier2Fins);
+				break;
+			case 3:
+				playerRocket.setFins(tier3Fins);
+				break;
+		}
+		
+		//pulls currently equipped nose cap and builds the player rocket with it
+		switch(playerSave.getEquippedNoseCap()) {
+			case 1:
+				playerRocket.setNoseCap(tier1NoseCap);
+				break;
+			case 2:
+				playerRocket.setNoseCap(tier2NoseCap);
+				break;
+			case 3:
+				playerRocket.setNoseCap(tier3NoseCap);
+				break;
+		}
 	}
 	
 	@FXML
