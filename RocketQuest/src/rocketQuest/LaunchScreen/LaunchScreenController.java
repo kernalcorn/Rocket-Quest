@@ -61,25 +61,25 @@ public class LaunchScreenController {
 	String rocketConfig;
 	
 	//objects for rocket parts
-	Body tier1Body = new Body(9, 1, 1, "T1", 1);
-	Body tier2Body = new Body(6, 2000, 2, "T2", 1);
-	Body tier3Body = new Body(3, 5000, 3, "T3", 1);
+	Body tier1Body = new Body(9, 1, 1, "T1", 9);
+	Body tier2Body = new Body(6, 2000, 2, "T2", 6);
+	Body tier3Body = new Body(3, 5000, 3, "T3", 3);
 	
-	Booster tier1Booster = new Booster(3, 1, 1, "T1", 1);
-	Booster tier2Booster = new Booster(5, 700, 2, "T2", 1);
-	Booster tier3Booster = new Booster(8, 3000, 3, "T3", 1);
+	Booster tier1Booster = new Booster(3, 1, 1, "T1", 3);
+	Booster tier2Booster = new Booster(5, 700, 2, "T2", 5);
+	Booster tier3Booster = new Booster(8, 3000, 3, "T3", 8);
 	
 	Fins tier1Fins = new Fins(1, 1, 1, "T1", 1);
-	Fins tier2Fins = new Fins(3, 500, 2, "T2", 1);
-	Fins tier3Fins = new Fins(6, 2500, 3, "T3", 1);
+	Fins tier2Fins = new Fins(3, 500, 2, "T2", 3);
+	Fins tier3Fins = new Fins(6, 2500, 3, "T3", 6);
 	
-	NoseCap tier1NoseCap = new NoseCap(7, 1, 1, "T1", 1);
-	NoseCap tier2NoseCap = new NoseCap(5, 1200, 2, "T2", 1);
-	NoseCap tier3NoseCap = new NoseCap(2, 4000, 3, "T3", 1);
+	NoseCap tier1NoseCap = new NoseCap(7, 1, 1, "T1", 7);
+	NoseCap tier2NoseCap = new NoseCap(5, 1200, 2, "T2", 5);
+	NoseCap tier3NoseCap = new NoseCap(2, 4000, 3, "T3", 3);
 	
-	Tank tier1Tank = new Tank(2, 1, 1, "T1", 1);
-	Tank tier2Tank = new Tank(3, 1500, 2, "T2", 1);
-	Tank tier3Tank = new Tank(4, 4500, 3, "T3", 1);
+	Tank tier1Tank = new Tank(2, 1, 1, "T1", 2);
+	Tank tier2Tank = new Tank(3, 1500, 2, "T2", 3);
+	Tank tier3Tank = new Tank(4, 4500, 3, "T3", 4);
 	
 	Rocket playerRocket = new Rocket(tier1Body, tier1Tank, tier1Booster, tier1NoseCap, tier1Fins);
 
