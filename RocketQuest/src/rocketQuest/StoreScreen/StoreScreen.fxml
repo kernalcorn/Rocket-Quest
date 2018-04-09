@@ -25,84 +25,132 @@
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="125.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
-                        <ImageView fx:id="imgTier1" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgTier1" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/MiscStuff/tier.png" />
+                           </image></ImageView>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="60.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
-                        <ImageView fx:id="imgTier2" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgTier2" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/MiscStuff/number2.png" />
+                           </image></ImageView>
+                        <Label />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="60.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
-                        <ImageView fx:id="imgTier3" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="60.0" stroke="TRANSPARENT" strokeType="INSIDE" width="33.0" />
+                        <ImageView fx:id="imgTier3" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/MiscStuff/number3.png" />
+                           </image></ImageView>
                      </children>
                   </HBox>
                   <HBox prefHeight="75.0" prefWidth="575.0">
                      <children>
                         <ImageView fx:id="imgBody" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="60.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
-                        <ImageView fx:id="imgBodyT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBodyT1" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgBodyT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBodyT1" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/MiscStuff/body.png" />
+                           </image></ImageView>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="60.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
                         <ImageView fx:id="imgBodyT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBodyT2" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/MiscStuff/b2button.png" />
                            </image></ImageView>
+                        <Label text="\$2000" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="60.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
                         <ImageView fx:id="imgBodyT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBodyT3" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/MiscStuff/b3button.png" />
                            </image></ImageView>
+                        <Label text="\$5000" />
                      </children>
                   </HBox>
                   <HBox prefHeight="75.0" prefWidth="575.0">
                      <children>
                         <ImageView fx:id="imgTank" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
-                        <ImageView fx:id="imgTankT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleTankT1" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgTankT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleTankT1" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/MiscStuff/tank.png" />
+                           </image></ImageView>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
-                        <ImageView fx:id="imgTankT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleTankT2" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgTankT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleTankT2" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/MiscStuff/tank1.png" />
+                           </image></ImageView>
+                        <Label text="\$1500" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
-                        <ImageView fx:id="imgTankT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleTankT3" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgTankT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleTankT3" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/MiscStuff/tank2.png" />
+                           </image></ImageView>
+                        <Label text="\$4500" />
                      </children>
                   </HBox>
                   <HBox prefHeight="75.0" prefWidth="575.0">
                      <children>
                         <ImageView fx:id="imgBooster" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
-                        <ImageView fx:id="imgBoostT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBoostT1" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgBoostT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBoostT1" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/MiscStuff/booster.png" />
+                           </image></ImageView>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
-                        <ImageView fx:id="imgBoostT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBoostT2" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgBoostT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBoostT2" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/MiscStuff/booster1.png" />
+                           </image></ImageView>
+                        <Label prefHeight="18.0" prefWidth="33.0" text="\$700" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
-                        <ImageView fx:id="imgBoostT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBoostT3" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgBoostT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleBoostT3" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/MiscStuff/booster2.png" />
+                           </image></ImageView>
+                        <Label text="\$3000" />
                      </children>
                   </HBox>
                   <HBox prefHeight="75.0" prefWidth="575.0">
                      <children>
                         <ImageView fx:id="imgNoseCap" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
-                        <ImageView fx:id="imgNoseT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleNoseT1" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgNoseT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleNoseT1" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/MiscStuff/nose.png" />
+                           </image></ImageView>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
                         <ImageView fx:id="imgNoseT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleNoseT2" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/MiscStuff/n2button.png" />
                            </image></ImageView>
+                        <Label text="\$1020" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
                         <ImageView fx:id="imgNoseT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleNoseT3" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/MiscStuff/n3button.png" />
                            </image></ImageView>
+                        <Label text="\$4000" />
                      </children>
                   </HBox>
                   <HBox prefHeight="65.0" prefWidth="575.0">
                      <children>
                         <ImageView fx:id="imgFins" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
-                        <ImageView fx:id="imgFinsT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleFinsT1" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgFinsT1" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleFinsT1" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/MiscStuff/fin.png" />
+                           </image></ImageView>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
                         <ImageView fx:id="imgFinsT2" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleFinsT2" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/MiscStuff/f2button.png" />
                            </image></ImageView>
+                        <Label prefHeight="18.0" prefWidth="33.0" text="\$500" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
                         <ImageView fx:id="imgFinsT3" fitHeight="75.0" fitWidth="125.0" onMouseClicked="#handleFinsT3" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/MiscStuff/f3button.png" />
                            </image></ImageView>
+                        <Label text="\$2500" />
                      </children>
                   </HBox>
                </children>
