@@ -102,17 +102,17 @@
             <Label layoutX="520.0" layoutY="114.0" text="Label" />
             <Label layoutX="520.0" layoutY="140.0" text="Label" />
             <Label layoutX="520.0" layoutY="160.0" text="Label" />
-            <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="32.0" layoutY="21.0" onMouseClicked="#handleStore" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="26.0" layoutY="21.0" onMouseClicked="#handleStore" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/MiscStuff/shopbutton.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgRocket" fitHeight="203.0" fitWidth="200.0" layoutX="60.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgRocket" fitHeight="203.0" fitWidth="200.0" layoutX="61.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/RocketPNGS/b3n3f3.png" />
                </image>
             </ImageView>
-            <Label layoutX="23.0" layoutY="427.0" text="Capacity:" />
+            <Label layoutX="23.0" layoutY="427.0" text="Stability:" />
             <Label layoutX="23.0" layoutY="453.0" text="Fuel Capacity:" />
             <Label layoutX="26.0" layoutY="482.0" text="Weight:" />
             <Label layoutX="29.0" layoutY="509.0" text="Thrust:" />
@@ -122,6 +122,11 @@
                   <Image url="@../../../images/MiscStuff/launchbutton.png" />
                </image>
             </ImageView>
+            <Label fx:id="lblStability" layoutX="114.0" layoutY="427.0" text="Label" />
+            <Label fx:id="lblFuelCapacity" layoutX="114.0" layoutY="453.0" text="Label" />
+            <Label fx:id="lblWeight" layoutX="114.0" layoutY="483.0" text="Label" />
+            <Label fx:id="lblThrust" layoutX="114.0" layoutY="509.0" text="Label" />
+            <Label fx:id="lblDrag" layoutX="114.0" layoutY="537.0" text="Label" />
          </children>
       </AnchorPane>
    </children>

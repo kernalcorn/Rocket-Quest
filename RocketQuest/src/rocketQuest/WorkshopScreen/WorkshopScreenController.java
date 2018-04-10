@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import rocketQuest.Main;
@@ -114,6 +115,21 @@ public class WorkshopScreenController
 	@FXML
 	private ImageView imgFinsT3;
 	
+	@FXML
+	private Label lblStability;
+	
+	@FXML
+	private Label lblFuelCapacity;
+	
+	@FXML
+	private Label lblWeight;
+	
+	@FXML
+	private Label lblThrust;
+	
+	@FXML
+	private Label lblDrag;
+	
 	//creating our database connection object
 	DbConnection rocketQuestDB = new DbConnection();
 	
@@ -200,6 +216,13 @@ public class WorkshopScreenController
 					   "n" + String.valueOf(playerSave.getEquippedNoseCap()) + 
 					   "f" + String.valueOf(playerSave.getEquippedFins());
 		imgRocket.setImage(new Image("file:images/RocketPNGS/" + rocketConfig + ".png"));
+		
+		//sets the labels to the stats of the current item equipped
+		lblFuelCapacity.setText(String.valueOf(playerRocket.getTank().getFuelCapacity()));
+		lblWeight.setText(String.valueOf(playerRocket.getBody().getWeight()));
+		lblThrust.setText(String.valueOf(playerRocket.getBooster().getThrust()));
+		lblDrag.setText(String.valueOf(playerRocket.getNoseCap().getDrag()));
+		lblStability.setText(String.valueOf(playerRocket.getFins().getStability()));
 		
 		//pulls currently equipped body and builds the player rocket with it
 		switch(playerSave.getEquippedBody()) {
@@ -292,6 +315,7 @@ public class WorkshopScreenController
 			playerRocket.setBody(tier1Body);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
+			lblWeight.setText(String.valueOf(playerRocket.getBody().getWeight()));
 		}
 	}
 	
@@ -309,6 +333,7 @@ public class WorkshopScreenController
 			playerRocket.setBody(tier2Body);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
+			lblWeight.setText(String.valueOf(playerRocket.getBody().getWeight()));
 		}
 	}
 	
@@ -326,6 +351,7 @@ public class WorkshopScreenController
 			playerRocket.setBody(tier3Body);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
+			lblWeight.setText(String.valueOf(playerRocket.getBody().getWeight()));
 		}
 	}
 	
@@ -342,6 +368,7 @@ public class WorkshopScreenController
 			playerSave.setEquippedTank(1);
 			playerRocket.setTank(tier1Tank);
 			rocketQuestDB.newSave(playerSave);
+			lblFuelCapacity.setText(String.valueOf(playerRocket.getTank().getFuelCapacity()));
 		}
 	}
 	
@@ -358,6 +385,7 @@ public class WorkshopScreenController
 			playerSave.setEquippedTank(2);
 			playerRocket.setTank(tier2Tank);
 			rocketQuestDB.newSave(playerSave);
+			lblFuelCapacity.setText(String.valueOf(playerRocket.getTank().getFuelCapacity()));
 		}
 	}
 	
@@ -374,6 +402,7 @@ public class WorkshopScreenController
 			playerSave.setEquippedTank(3);
 			playerRocket.setTank(tier3Tank);
 			rocketQuestDB.newSave(playerSave);
+			lblFuelCapacity.setText(String.valueOf(playerRocket.getTank().getFuelCapacity()));
 		}
 	}
 	
@@ -390,6 +419,7 @@ public class WorkshopScreenController
 			playerSave.setEquippedBooster(1);
 			playerRocket.setBooster(tier1Booster);
 			rocketQuestDB.newSave(playerSave);
+			lblThrust.setText(String.valueOf(playerRocket.getBooster().getThrust()));
 		}
 	}
 	
@@ -406,6 +436,7 @@ public class WorkshopScreenController
 			playerSave.setEquippedBooster(2);
 			playerRocket.setBooster(tier2Booster);
 			rocketQuestDB.newSave(playerSave);
+			lblThrust.setText(String.valueOf(playerRocket.getBooster().getThrust()));
 		}
 	}
 	
@@ -422,6 +453,7 @@ public class WorkshopScreenController
 			playerSave.setEquippedBooster(3);
 			playerRocket.setBooster(tier3Booster);
 			rocketQuestDB.newSave(playerSave);
+			lblThrust.setText(String.valueOf(playerRocket.getBooster().getThrust()));
 		}
 	}
 	
@@ -439,6 +471,7 @@ public class WorkshopScreenController
 			playerRocket.setNoseCap(tier1NoseCap);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
+			lblDrag.setText(String.valueOf(playerRocket.getNoseCap().getDrag()));
 		}
 	}
 	
@@ -456,6 +489,7 @@ public class WorkshopScreenController
 			playerRocket.setNoseCap(tier2NoseCap);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
+			lblDrag.setText(String.valueOf(playerRocket.getNoseCap().getDrag()));
 		}
 	}
 	
@@ -473,6 +507,7 @@ public class WorkshopScreenController
 			playerRocket.setNoseCap(tier3NoseCap);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
+			lblDrag.setText(String.valueOf(playerRocket.getNoseCap().getDrag()));
 		}
 	}
 	
@@ -490,6 +525,7 @@ public class WorkshopScreenController
 			playerRocket.setFins(tier1Fins);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
+			lblStability.setText(String.valueOf(playerRocket.getFins().getStability()));
 		}
 	}
 	
@@ -507,6 +543,7 @@ public class WorkshopScreenController
 			playerRocket.setFins(tier2Fins);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
+			lblStability.setText(String.valueOf(playerRocket.getFins().getStability()));
 		}
 	}
 	
@@ -524,6 +561,7 @@ public class WorkshopScreenController
 			playerRocket.setFins(tier3Fins);
 			rocketQuestDB.newSave(playerSave);
 			updateRocketImage();
+			lblStability.setText(String.valueOf(playerRocket.getFins().getStability()));
 		}
 	}
 	
