@@ -61,23 +61,15 @@ public class DbConnection
  	
  	public void newSave(Save newSavestate) throws SQLException
  	{
- 		
- 		connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/rocketquest?" + "user=root&password=ruby21400");
- 		/*
- 		statement = connect.createStatement();
- 		statement.executeUpdate("INSERT INTO savestates (saveSlot, Money, HighScore, "
- 					 + "EquippedBody, EquippedTank, EquippedBooster, EquippedNoseCap, EquippedFins, "
- 					 + "BodyT1, BodyT2, BodyT3, TankT1, TankT2, TankT3, BoosterT1, BoosterT2, BoosterT3, "
- 					 + "NoseCapT1, NoseCapT2, NoseCapT3, FinsT1, FinsT2, FinsT3)"
- 					 + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?")
- 		*/
- 		
+ 		//opens the connection to the database
+ 		connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/rocketquest?" + "user=root&password=ruby21400"); 		
 		preparedStatement = connect.prepareStatement("INSERT INTO savestates (saveSlot, Money, HighScore, "
  					 + "EquippedBody, EquippedTank, EquippedBooster, EquippedNoseCap, EquippedFins, "
  					 + "BodyT1, BodyT2, BodyT3, TankT1, TankT2, TankT3, BoosterT1, BoosterT2, BoosterT3, "
  					 + "NoseCapT1, NoseCapT2, NoseCapT3, FinsT1, FinsT2, FinsT3)"
  					 + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 		
+		//sets all the values to be inserted into the database
 		preparedStatement.setInt(1, newSavestate.getSlot() + 1);
 		preparedStatement.setInt(2, newSavestate.getMoney());
 		preparedStatement.setInt(3, newSavestate.getHighScore());
@@ -102,11 +94,12 @@ public class DbConnection
 		preparedStatement.setBoolean(22, newSavestate.isFinsT2());
 		preparedStatement.setBoolean(23, newSavestate.isFinsT3());
 		
+		//executes the sql query
  		preparedStatement.executeUpdate();
  		
+ 		//closes the database connection
  		preparedStatement.close();
  		connect.close();
- 		
  	}
  	
  	//must always be called with appropriate query before using a database
