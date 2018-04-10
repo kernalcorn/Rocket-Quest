@@ -1,15 +1,20 @@
+/*
+Evan Roberts and Aidan Maney
+Period Five
+April 10, 2018
+Spring Project
+RocketPart
+ */
+
 package rocketQuest.PartClasses;
 
 public abstract class RocketPart 
 {
-	
 	//fields
 	private int weight;
 	private int price;
 	private int tier;
 	private String name;
-	
-	
 	
 	//default constructor
 	public RocketPart() 
@@ -68,7 +73,4 @@ public abstract class RocketPart
 	{
 		this.name = name;
 	}
-	
-	
-	
 }

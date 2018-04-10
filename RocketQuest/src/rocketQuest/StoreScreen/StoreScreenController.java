@@ -1,3 +1,11 @@
+/*
+Evan Roberts and Aidan Maney
+Period Five
+April 10, 2018
+Spring Project
+StoreScreenController
+ */
+
 package rocketQuest.StoreScreen;
 
 import java.io.IOException;

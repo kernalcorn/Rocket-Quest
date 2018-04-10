@@ -1,3 +1,11 @@
+/*
+Evan Roberts and Aidan Maney
+Period Five
+April 10, 2018
+Spring Project
+Main
+ */
+
 package rocketQuest;
 
 import java.io.IOException;

@@ -1,23 +1,28 @@
+/*
+Evan Roberts and Aidan Maney
+Period Five
+April 10, 2018
+Spring Project
+Rocket
+ */
+
 package rocketQuest.PartClasses;
 
 public class Rocket 
 {
-	
+	//fields
 	private Body body;
 	private Tank tank;
 	private Booster booster;
 	private NoseCap noseCap;
 	private Fins fins;
 	
-	private String imagePath;
-	private String bodyImgString = "b1";
-	private String noseCapImgString = "n1";
-	private String finsImgString = "f1";
-	
+	//default constructor
 	public Rocket() {
 		super();
 	}
 
+	//full constructor
 	public Rocket(Body body, Tank tank, Booster booster, NoseCap noseCap, Fins fins) {
 		super();
 		this.body = body;
@@ -25,13 +30,9 @@ public class Rocket
 		this.booster = booster;
 		this.noseCap = noseCap;
 		this.fins = fins;
-		
-		bodyImgString = "b1";
-		noseCapImgString = "n1";
-		finsImgString = "f1";
-		imagePath = bodyImgString + noseCapImgString + finsImgString;
 	}
 
+	//getters and setters
 	public Body getBody() {
 		return body;
 	}
@@ -70,13 +71,5 @@ public class Rocket
 
 	public void setFins(Fins fins) {
 		this.fins = fins;
-	}
-
-	public String getImagePath() {
-		return imagePath;
-	}
-
-	public void setImagePath(String imagePath) {
-		this.imagePath = imagePath;
 	}
 }

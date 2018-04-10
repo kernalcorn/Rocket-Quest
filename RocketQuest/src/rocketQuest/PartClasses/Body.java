@@ -1,3 +1,11 @@
+/*
+Evan Roberts and Aidan Maney
+Period Five
+April 10, 2018
+Spring Project
+Body
+ */
+
 package rocketQuest.PartClasses;
 
 public class Body extends RocketPart

@@ -1,3 +1,11 @@
+/*
+Evan Roberts and Aidan Maney
+Period Five
+April 10, 2018
+Spring Project
+PostFlightScoreScreen
+ */
+
 package rocketQuest.PostFlightScreen;
 
 import javafx.animation.AnimationTimer;

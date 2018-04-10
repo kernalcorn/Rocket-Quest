@@ -1,3 +1,11 @@
+/*
+Evan Roberts and Aidan Maney
+Period Five
+April 10, 2018
+Spring Project
+Save
+ */
+
 package rocketQuest.Database;
 
 import java.sql.SQLException;
@@ -5,6 +13,7 @@ import java.util.Date;
 
 public class Save 
 {
+	//fields
 	private int slot;
 	private int money;
 	private int highScore;
@@ -30,7 +39,7 @@ public class Save
 	private boolean finsT3;
 	
 	
-	
+	//full constructor
 	public Save(int slot, int money, int highScore, int equippedBody, int equippedTank, int equippedBooster,
 			int equippedNoseCap, int equippedFins, boolean bodyT1, boolean bodyT2, boolean bodyT3, boolean tankT1,
 			boolean tankT2, boolean tankT3, boolean boosterT1, boolean boosterT2, boolean boosterT3, boolean noseCapT1,
@@ -62,14 +71,12 @@ public class Save
 		this.finsT3 = finsT3;
 	}
 	
-	
-	
+	//default constructor
 	public Save() {
 		super();
 	}
 
-
-
+	//getters and setters
 	public int getSlot() {
 		return slot;
 	}
@@ -214,52 +221,6 @@ public class Save
 	}
 	public void setFinsT3(boolean finsT3) {
 		this.finsT3 = finsT3;
-	}
-	
-	public void getData() throws SQLException
-	{
-		DbConnection rocketQuestDB = new DbConnection();
-		Save gameData = new Save();
-		gameData = rocketQuestDB.readSavestateResultSet();
-		//setting info fields with updates values
-		setSlot(gameData.getSlot());
-		setMoney(gameData.getMoney());
-		setHighScore(gameData.getHighScore());
-		//setting equipped fields with updated values
-		setEquippedBody(gameData.getEquippedBody());
-		setEquippedTank(gameData.getEquippedTank());
-		setEquippedBooster(gameData.getEquippedBooster());
-		setEquippedNoseCap(gameData.getEquippedNoseCap());
-		setEquippedFins(gameData.getEquippedFins());
-		//setting ownage fields with updated values
-		setBodyT1(gameData.isBodyT1());
-		setBodyT2(gameData.isBodyT2());
-		setBodyT3(gameData.isBodyT3());
-		setTankT1(gameData.isTankT1());
-		setTankT2(gameData.isTankT2());
-		setTankT3(gameData.isTankT3());
-		setBoosterT1(gameData.isBoosterT1());
-		setBoosterT2(gameData.isBoosterT2());
-		setBoosterT3(gameData.isBoosterT3());
-		setNoseCapT1(gameData.isNoseCapT1());
-		setNoseCapT2(gameData.isNoseCapT2());
-		setNoseCapT3(gameData.isNoseCapT3());
-		setFinsT1(gameData.isFinsT1());
-		setFinsT2(gameData.isFinsT2());
-		setFinsT3(gameData.isFinsT3());
-	}
-	
-	public void pushData() throws SQLException
-	{
-		DbConnection rocketQuestDB = new DbConnection();
-		Save gameData = new Save(slot, money, highScore, 
-				 				 equippedBody, equippedTank, equippedBooster, equippedNoseCap, equippedFins, 
-				 				 bodyT1, bodyT2, bodyT3, 
-				 				 tankT1, tankT2, tankT3, 
-				 				 boosterT1, boosterT2, boosterT3, 
-				 				 noseCapT1, noseCapT2, noseCapT3, 
-				 				 finsT1, finsT2, finsT3);
-		rocketQuestDB.newSave(gameData);
 	}
 }
 

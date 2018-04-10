@@ -1,3 +1,11 @@
+/*
+Evan Roberts and Aidan Maney
+Period Five
+April 10, 2018
+Spring Project
+DbConnection
+ */
+
 package rocketQuest.Database;
 
 import java.sql.Connection;
@@ -13,6 +21,7 @@ import javax.print.attribute.standard.DateTimeAtCompleted;
 
 public class DbConnection 
 {
+	//fields
  	private Connection connect = null;
  	private Statement statement = null;
  	private PreparedStatement preparedStatement = null;
@@ -22,9 +31,10 @@ public class DbConnection
  	{
  		//begins the connection to the database with the specified query
  		openConnection("SELECT * FROM savestates ORDER BY saveSlot DESC LIMIT 1");
- 		
+ 		//initializes an object modeling the database data
  		Save save = new Save();
  		
+ 		//grabbing the attributes in the database selection
  		while (resultSet.next())
  		{
  			int slot = resultSet.getInt("saveSlot");
@@ -50,10 +60,10 @@ public class DbConnection
  			boolean finsT1 = resultSet.getBoolean("FinsT1");
  			boolean finsT2 = resultSet.getBoolean("FinsT2");
  			boolean finsT3 = resultSet.getBoolean("FinsT3");
- 			
+ 			//adding sttributes to the save object
  			save = new Save(slot, money, highScore, equippedBody, equippedTank, equippedBooster, equippedNoseCap, equippedFins, bodyT1, bodyT2, bodyT3, tankT1, tankT2, tankT3, boosterT1, boosterT2, boosterT3, noseCapT1, noseCapT2, noseCapT3, finsT1, finsT2, finsT3);
  		}
- 		
+ 		//closing connection
  		closeConnection();
  		
  		return save;
