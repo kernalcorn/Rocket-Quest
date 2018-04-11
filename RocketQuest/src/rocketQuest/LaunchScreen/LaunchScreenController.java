@@ -242,6 +242,7 @@ public class LaunchScreenController {
 			rocketQuestDB.newSave(playerSave);
 		}
 		
+		//saves to db
 		playerSave = rocketQuestDB.readSavestateResultSet();
 		playerSave.setMoney(playerSave.getMoney() + (height/10));
 		rocketQuestDB.newSave(playerSave);
