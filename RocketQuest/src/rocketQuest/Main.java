@@ -36,7 +36,6 @@ public class Main extends Application
 		{
 			this.primaryStage = primaryStage;
 			this.primaryStage.setTitle("Rocket Quest");
-			//this.primaryStage.getIcons().add(new Image("file:resources/Application.png"));
 			
 			showMainView();
 			showHomeScreen();
@@ -51,6 +50,7 @@ public class Main extends Application
 		launch(args);
 	}
 	
+	//displays the main fxml file 
 	public void showMainView() throws IOException
 	{
 		FXMLLoader loader = new FXMLLoader();
@@ -61,6 +61,7 @@ public class Main extends Application
 		primaryStage.show();
 	}
 	
+	//displays the home screen fxml file
 	public static void showHomeScreen() throws IOException
 	{
 		FXMLLoader loader = new FXMLLoader();
@@ -69,6 +70,7 @@ public class Main extends Application
 		mainLayout.setCenter(HomeScreen);
 	}
 	
+	//displays the launch screen fxml file
 	public static void showLaunchScreen() throws IOException
 	{
 		FXMLLoader loader = new FXMLLoader();
@@ -77,6 +79,7 @@ public class Main extends Application
 		mainLayout.setCenter(LaunchScreen);
 	}
 	
+	//displays the post flight screen fxml file
 	public static void showPostFlightScreen() throws IOException
 	{
 		FXMLLoader loader = new FXMLLoader();
@@ -85,6 +88,7 @@ public class Main extends Application
 		mainLayout.setCenter(PostFlightScreen);
 	}
 	
+	//displays the store screen fxml file
 	public static void showStoreScreen() throws IOException
 	{
 		FXMLLoader loader = new FXMLLoader();
@@ -93,6 +97,7 @@ public class Main extends Application
 		mainLayout.setCenter(StoreScreen);
 	}
 	
+	//displays the workshop screen fxml file
 	public static void showWorkshopScreen() throws IOException
 	{
 		FXMLLoader loader = new FXMLLoader();

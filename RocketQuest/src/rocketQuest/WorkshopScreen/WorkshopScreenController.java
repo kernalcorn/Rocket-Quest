@@ -130,6 +130,12 @@ public class WorkshopScreenController
 	@FXML
 	private Label lblDrag;
 	
+	@FXML
+	private Label lblMoney;
+	
+	@FXML
+	private Label lblHighScore;
+	
 	//creating our database connection object
 	DbConnection rocketQuestDB = new DbConnection();
 	
@@ -223,6 +229,9 @@ public class WorkshopScreenController
 		lblThrust.setText(String.valueOf(playerRocket.getBooster().getThrust()));
 		lblDrag.setText(String.valueOf(playerRocket.getNoseCap().getDrag()));
 		lblStability.setText(String.valueOf(playerRocket.getFins().getStability()));
+		
+		lblMoney.setText("$" + String.valueOf(playerSave.getMoney()));
+		lblHighScore.setText("High Score: " + String.valueOf(playerSave.getHighScore()));
 		
 		//pulls currently equipped body and builds the player rocket with it
 		switch(playerSave.getEquippedBody()) {

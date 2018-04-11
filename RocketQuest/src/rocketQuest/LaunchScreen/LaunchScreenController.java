@@ -217,7 +217,7 @@ public class LaunchScreenController {
 	}
 	
 	//animates the rocket up and back down when launching the rocket
-	public void handleLaunch()
+	public void handleLaunch() throws SQLException
 	{
 		TranslateTransition transition = new TranslateTransition();
 		transition.setDuration(Duration.seconds(5));
@@ -232,15 +232,19 @@ public class LaunchScreenController {
 		SequentialTransition move = new SequentialTransition(transition, transition2);
 		move.play();
 		
-		heightCalc();
+		//calculates the height of the rocket for each flight based on the parts equipped in workshop
+		height = 500 * (playerRocket.getFins().getStability() + playerRocket.getTank().getFuelCapacity() + ( 10 - playerRocket.getBody().getWeight()) + playerRocket.getBooster().getThrust() + (10 - playerRocket.getNoseCap().getDrag()));
 		lblHeight.setText(String.valueOf(height));
-	}
-	
-	//calculates the height of the rocket for each flight based on the parts equipped in workshop
-	public void heightCalc()
-	{
-		System.out.println(String.valueOf(playerRocket.getBody().getWeight()));
-		height = (playerRocket.getFins().getStability() + playerRocket.getTank().getFuelCapacity() + ( 10 - playerRocket.getBody().getWeight()) + playerRocket.getBooster().getThrust() + (10 - playerRocket.getNoseCap().getDrag()));
+		if(playerSave.getHighScore() < height)
+		{
+			playerSave = rocketQuestDB.readSavestateResultSet();
+			playerSave.setHighScore(height);
+			rocketQuestDB.newSave(playerSave);
+		}
+		
+		playerSave = rocketQuestDB.readSavestateResultSet();
+		playerSave.setMoney(playerSave.getMoney() + (height/10));
+		rocketQuestDB.newSave(playerSave);
 	}
 	
 	public void setMainApp(Main mainApp) 
