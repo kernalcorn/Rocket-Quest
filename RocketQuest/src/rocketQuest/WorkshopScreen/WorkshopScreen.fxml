@@ -10,7 +10,7 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Label layoutX="385.0" layoutY="196.0" text="Tier 1" />
+            <Label layoutX="385.0" layoutY="187.0" text="Tier 1" />
             <Label layoutX="462.0" layoutY="187.0" text="Tier 2" />
             <Label layoutX="533.0" layoutY="187.0" text="Tier 3" />
             <Label layoutX="320.0" layoutY="231.0" text="Body" />
@@ -20,17 +20,17 @@
             <Label layoutX="323.0" layoutY="500.0" text="Fins" />
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="222.0" onMouseClicked="#handleBodyT1" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number1.png" />
+                  <Image url="@../../../images/RocketParts/body1.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="222.0" onMouseClicked="#handleBodyT2" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number2.png" />
+                  <Image url="@../../../images/MiscStuff/b2button.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="222.0" onMouseClicked="#handleBodyT3" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number3.png" />
+                  <Image url="@../../../images/MiscStuff/b3button.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="291.0" onMouseClicked="#handleTankT1" pickOnBounds="true" preserveRatio="true">
@@ -45,52 +45,52 @@
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="427.0" onMouseClicked="#handleNoseT1" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number1.png" />
+                  <Image url="@../../../images/RocketParts/nose1.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="491.0" onMouseClicked="#handleFinsT1" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number1.png" />
+                  <Image url="@../../../images/RocketParts/fin1.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="291.0" onMouseClicked="#handleTankT2" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number2.png" />
+                  <Image url="@../../../images/MiscStuff/tank1.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="357.0" onMouseClicked="#handleBoostT2" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number2.png" />
+                  <Image url="@../../../images/MiscStuff/booster1.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="427.0" onMouseClicked="#handleNoseT2" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number2.png" />
+                  <Image url="@../../../images/MiscStuff/n2button.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="491.0" onMouseClicked="#handleFinsT2" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number2.png" />
+                  <Image url="@../../../images/MiscStuff/f2button.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="291.0" onMouseClicked="#handleTankT3" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number3.png" />
+                  <Image url="@../../../images/MiscStuff/tank2.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="357.0" onMouseClicked="#handleBoostT3" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number3.png" />
+                  <Image url="@../../../images/MiscStuff/booster2.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="427.0" onMouseClicked="#handleNoseT3" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number3.png" />
+                  <Image url="@../../../images/MiscStuff/n3button.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="491.0" onMouseClicked="#handleFinsT3" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number3.png" />
+                  <Image url="@../../../images/MiscStuff/f3button.png" />
                </image>
             </ImageView>
             <Label fx:id="lblMoney" layoutX="35.0" layoutY="131.0" text="\$0000000000" />
@@ -114,12 +114,12 @@
                   <Image url="@../../../images/MiscStuff/launchbutton.png" />
                </image>
             </ImageView>
-            <Label fx:id="lblStability" layoutX="114.0" layoutY="427.0" text="Label" />
-            <Label fx:id="lblFuelCapacity" layoutX="114.0" layoutY="453.0" text="Label" />
-            <Label fx:id="lblWeight" layoutX="114.0" layoutY="483.0" text="Label" />
-            <Label fx:id="lblThrust" layoutX="114.0" layoutY="509.0" text="Label" />
-            <Label fx:id="lblDrag" layoutX="114.0" layoutY="537.0" text="Label" />
-            <Label fx:id="lblHighScore" layoutX="33.0" layoutY="148.0" text="Label" />
+            <Label fx:id="lblStability" layoutX="114.0" layoutY="427.0" text="0" />
+            <Label fx:id="lblFuelCapacity" layoutX="114.0" layoutY="453.0" text="0" />
+            <Label fx:id="lblWeight" layoutX="114.0" layoutY="483.0" text="0" />
+            <Label fx:id="lblThrust" layoutX="114.0" layoutY="509.0" text="0" />
+            <Label fx:id="lblDrag" layoutX="114.0" layoutY="537.0" text="0" />
+            <Label fx:id="lblHighScore" layoutX="33.0" layoutY="148.0" text="High Score:" />
          </children>
       </AnchorPane>
    </children>
