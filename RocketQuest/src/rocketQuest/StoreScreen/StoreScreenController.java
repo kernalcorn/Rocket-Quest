@@ -62,7 +62,13 @@ public class StoreScreenController
 	private ImageView imgBodyT2;
 	
 	@FXML
+	private Label lblBodyT2;
+	
+	@FXML
 	private ImageView imgBodyT3;
+	
+	@FXML
+	private Label lblBodyT3;
 	
 	@FXML
 	private ImageView imgTank;
@@ -74,7 +80,13 @@ public class StoreScreenController
 	private ImageView imgTankT2;
 	
 	@FXML
+	private Label lblTankT2;
+	
+	@FXML
 	private ImageView imgTankT3;
+	
+	@FXML
+	private Label lblTankT3;
 	
 	@FXML
 	private ImageView imgBooster;
@@ -86,7 +98,13 @@ public class StoreScreenController
 	private ImageView imgBoostT2;
 	
 	@FXML
+	private Label lblBoosterT2;
+	
+	@FXML
 	private ImageView imgBoostT3;
+	
+	@FXML
+	private Label lblBoosterT3;
 	
 	@FXML
 	private ImageView imgNoseCap;
@@ -98,7 +116,13 @@ public class StoreScreenController
 	private ImageView imgNoseT2;
 	
 	@FXML
+	private Label lblNoseCapT2;
+	
+	@FXML
 	private ImageView imgNoseT3;
+	
+	@FXML
+	private Label lblNoseCapT3;
 	
 	@FXML
 	private ImageView imgFins;
@@ -110,7 +134,13 @@ public class StoreScreenController
 	private ImageView imgFinsT2;
 	
 	@FXML
+	private Label lblFinsT2;
+	
+	@FXML
 	private ImageView imgFinsT3;
+	
+	@FXML
+	private Label lblFinsT3;
 	
 	//creating our database connection object
 	DbConnection rocketQuestDB = new DbConnection();
@@ -191,6 +221,86 @@ public class StoreScreenController
 	{
 		playerSave = rocketQuestDB.readSavestateResultSet();
 		lblMoney.setText("$" + String.valueOf(playerSave.getMoney()));
+		
+		//sets price label for tier 2 Body
+		if(playerSave.isBodyT2())
+		{
+			lblBodyT2.setText("SOLD");
+		}else{
+			lblBodyT2.setText("$" + String.valueOf(tier2Body.getPrice()));
+		}
+		
+		//sets price label for tier 3 Body
+		if(playerSave.isBodyT3())
+		{
+			lblBodyT3.setText("SOLD");
+		}else{
+			lblBodyT3.setText("$" + String.valueOf(tier3Body.getPrice()));
+		}
+		
+		//sets price label for tier 2 Tank
+		if(playerSave.isTankT2())
+		{
+			lblTankT2.setText("SOLD");
+		}else{
+			lblTankT2.setText("$" + String.valueOf(tier2Tank.getPrice()));
+		}
+		
+		//sets price label for tier 3 Tank
+		if(playerSave.isTankT3())
+		{
+			lblTankT3.setText("SOLD");
+		}else{
+			lblTankT3.setText("$" + String.valueOf(tier3Tank.getPrice()));
+		}
+		
+		//sets price label for tier 2 booster
+		if(playerSave.isBoosterT2())
+		{
+			lblBoosterT2.setText("SOLD");
+		}else{
+			lblBoosterT2.setText("$" + String.valueOf(tier2Booster.getPrice()));
+		}
+		
+		//sets price label for tier 3 booster
+		if(playerSave.isBoosterT3())
+		{
+			lblBoosterT3.setText("SOLD");
+		}else{
+			lblBoosterT3.setText("$" + String.valueOf(tier3Booster.getPrice()));
+		}
+		
+		//sets price label for tier 2 Nose cap
+		if(playerSave.isNoseCapT2())
+		{
+			lblNoseCapT2.setText("SOLD");
+		}else{
+			lblNoseCapT2.setText("$" + String.valueOf(tier2NoseCap.getPrice()));
+		}
+		
+		//sets price label for tier 3 Nose cap
+		if(playerSave.isNoseCapT3())
+		{
+			lblNoseCapT3.setText("SOLD");
+		}else{
+			lblNoseCapT3.setText("$" + String.valueOf(tier3NoseCap.getPrice()));
+		}
+		
+		//sets price label for tier 2 fins
+		if(playerSave.isFinsT2())
+		{
+			lblFinsT2.setText("SOLD");
+		}else{
+			lblFinsT2.setText("$" + String.valueOf(tier2Fins.getPrice()));
+		}
+		
+		//sets price label for tier 3 fins
+		if(playerSave.isFinsT3())
+		{
+			lblFinsT3.setText("SOLD");
+		}else{
+			lblFinsT3.setText("$" + String.valueOf(tier3Fins.getPrice()));
+		}
 	}
 	
 	@FXML
@@ -213,6 +323,7 @@ public class StoreScreenController
 			//subtracts money
 			playerSave.setMoney(playerSave.getMoney() - tier2Body.getPrice());
 			lblMoney.setText("$" + String.valueOf(playerSave.getMoney()));
+			lblBodyT2.setText("SOLD");
 			//adds new data to database
 			rocketQuestDB.newSave(playerSave);
 		}
@@ -231,6 +342,7 @@ public class StoreScreenController
 			//subtracts money
 			playerSave.setMoney(playerSave.getMoney() - tier3Body.getPrice());
 			lblMoney.setText("$" + String.valueOf(playerSave.getMoney()));
+			lblBodyT3.setText("SOLD");
 			//adds new data to database
 			rocketQuestDB.newSave(playerSave);
 		}
@@ -249,6 +361,7 @@ public class StoreScreenController
 			//subtracts money
 			playerSave.setMoney(playerSave.getMoney() - tier2Tank.getPrice());
 			lblMoney.setText("$" + String.valueOf(playerSave.getMoney()));
+			lblTankT2.setText("SOLD");
 			//adds new data to database
 			rocketQuestDB.newSave(playerSave);
 		}
@@ -267,6 +380,7 @@ public class StoreScreenController
 			//subtracts money
 			playerSave.setMoney(playerSave.getMoney() - tier3Tank.getPrice());
 			lblMoney.setText("$" + String.valueOf(playerSave.getMoney()));
+			lblTankT3.setText("SOLD");
 			//adds new data to database
 			rocketQuestDB.newSave(playerSave);
 		}
@@ -285,6 +399,7 @@ public class StoreScreenController
 			//subtracts money
 			playerSave.setMoney(playerSave.getMoney() - tier2Booster.getPrice());
 			lblMoney.setText("$" + String.valueOf(playerSave.getMoney()));
+			lblBoosterT2.setText("SOLD");
 			//adds new data to database
 			rocketQuestDB.newSave(playerSave);
 		}
@@ -303,6 +418,7 @@ public class StoreScreenController
 			//subtracts money
 			playerSave.setMoney(playerSave.getMoney() - tier3Booster.getPrice());
 			lblMoney.setText("$" + String.valueOf(playerSave.getMoney()));
+			lblBoosterT3.setText("SOLD");
 			//adds new data to database
 			rocketQuestDB.newSave(playerSave);
 		}
@@ -321,6 +437,7 @@ public class StoreScreenController
 			//subtracts money
 			playerSave.setMoney(playerSave.getMoney() - tier2NoseCap.getPrice());
 			lblMoney.setText("$" + String.valueOf(playerSave.getMoney()));
+			lblNoseCapT2.setText("SOLD");
 			//adds new data to database
 			rocketQuestDB.newSave(playerSave);
 		}
@@ -339,6 +456,7 @@ public class StoreScreenController
 			//subtracts money
 			playerSave.setMoney(playerSave.getMoney() - tier3NoseCap.getPrice());
 			lblMoney.setText("$" + String.valueOf(playerSave.getMoney()));
+			lblNoseCapT3.setText("SOLD");
 			//adds new data to database
 			rocketQuestDB.newSave(playerSave);
 		}
@@ -357,6 +475,7 @@ public class StoreScreenController
 			//subtracts money
 			playerSave.setMoney(playerSave.getMoney() - tier2Fins.getPrice());
 			lblMoney.setText("$" + String.valueOf(playerSave.getMoney()));
+			lblFinsT2.setText("SOLD");
 			//adds new data to database
 			rocketQuestDB.newSave(playerSave);
 		}
@@ -375,6 +494,7 @@ public class StoreScreenController
 			//subtracts money
 			playerSave.setMoney(playerSave.getMoney() - tier3Fins.getPrice());
 			lblMoney.setText("$" + String.valueOf(playerSave.getMoney()));
+			lblFinsT3.setText("SOLD");
 			//adds new data to database
 			rocketQuestDB.newSave(playerSave);
 		}

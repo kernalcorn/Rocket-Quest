@@ -59,6 +59,9 @@ public class LaunchScreenController {
 	@FXML
 	private ImageView imgLaunch;
 	
+	@FXML
+	private Label lblMoneyMade;
+	
 	private int height;
 	
 	//creating our database connection object
@@ -145,6 +148,8 @@ public class LaunchScreenController {
 					   "f" + String.valueOf(playerSave.getEquippedFins());
 		imgRocket.setImage(new Image("file:images/RocketPNGS/" + rocketConfig + ".png"));
 		
+		lblMoneyMade.setText("Money: ");
+		
 		//pulls currently equipped body and builds the player rocket with it
 		switch(playerSave.getEquippedBody()) {
 			case 1:
@@ -219,10 +224,13 @@ public class LaunchScreenController {
 	//animates the rocket up and back down when launching the rocket
 	public void handleLaunch() throws SQLException
 	{
+		//calculates the height of the rocket for each flight based on the parts equipped in workshop
+		height = 500 * (playerRocket.getFins().getStability() + playerRocket.getTank().getFuelCapacity() + ( 10 - playerRocket.getBody().getWeight()) + playerRocket.getBooster().getThrust() + (10 - playerRocket.getNoseCap().getDrag()));
+		
 		TranslateTransition transition = new TranslateTransition();
 		transition.setDuration(Duration.seconds(5));
 		transition.setNode(imgRocket);
-		transition.setToY(-400);
+		transition.setToY(-(height/40));
 		
 		TranslateTransition transition2 = new TranslateTransition();
 		transition2.setDuration(Duration.seconds(2));
@@ -232,9 +240,8 @@ public class LaunchScreenController {
 		SequentialTransition move = new SequentialTransition(transition, transition2);
 		move.play();
 		
-		//calculates the height of the rocket for each flight based on the parts equipped in workshop
-		height = 500 * (playerRocket.getFins().getStability() + playerRocket.getTank().getFuelCapacity() + ( 10 - playerRocket.getBody().getWeight()) + playerRocket.getBooster().getThrust() + (10 - playerRocket.getNoseCap().getDrag()));
 		lblHeight.setText(String.valueOf(height));
+		lblMoneyMade.setText("Money: + $" + String.valueOf(height/10));
 		if(playerSave.getHighScore() < height)
 		{
 			playerSave = rocketQuestDB.readSavestateResultSet();
