@@ -20,7 +20,7 @@
             <Label layoutX="323.0" layoutY="500.0" text="Fins" />
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="222.0" onMouseClicked="#handleBodyT1" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/RocketParts/body1.png" />
+                  <Image url="@../../../images/MiscStuff/b1button.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="222.0" onMouseClicked="#handleBodyT2" pickOnBounds="true" preserveRatio="true">
@@ -35,22 +35,22 @@
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="291.0" onMouseClicked="#handleTankT1" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number1.png" />
+                  <Image url="@../../../images/MiscStuff/tank3.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="357.0" onMouseClicked="#handleBoostT1" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/MiscStuff/number1.png" />
+                  <Image url="@../../../images/MiscStuff/booster3.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="427.0" onMouseClicked="#handleNoseT1" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/RocketParts/nose1.png" />
+                  <Image url="@../../../images/MiscStuff/n1button.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="382.0" layoutY="491.0" onMouseClicked="#handleFinsT1" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/RocketParts/fin1.png" />
+                  <Image url="@../../../images/MiscStuff/f1button.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="291.0" onMouseClicked="#handleTankT2" pickOnBounds="true" preserveRatio="true">
